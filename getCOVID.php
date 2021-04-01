@@ -1,4 +1,3 @@
-
 <?php 
     Include 'db_connection.php';
     $con = OpenCon();

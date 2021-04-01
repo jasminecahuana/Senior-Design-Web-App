@@ -8,21 +8,18 @@
 
   <!----css/bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="style.css">
 
   <!--scripts-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!--Gridjs.io-->
   <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
+  <!--Our Source Script-->
   <script src="indexjs.js" defer></script>
-  <!-- <script src="twitterCOVIDStream.js" defer></script> -->
 
   <title>SDTest</title>
 </head>
@@ -32,9 +29,6 @@
     <div class="top-nav-bar section">
       <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a class="navbar-brand" href="#">Intelligent Infectious Disease Tracking System</a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
@@ -45,6 +39,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About Us</a>
+              <!--Need to do^-->
             </li>
           </ul>
         </div>
@@ -59,22 +54,18 @@
             <p>Measels - R<sub>0</sub> of 18</p>
           </div>
           <!-- Modal -->
-          <div class="modal fade" id="topCardOne" tabindex="-1" role="dialog"
-            aria-labelledby="topCardOneTitle" aria-hidden="true">
+          <div class="modal fade" id="topCardOne" tabindex="-1" role="dialog" aria-labelledby="topCardOneTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <h4 class="modal-title">Most Contagious: Measels</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <p>Need to fill</p>
                 </div>
               </div>
             </div>
@@ -88,22 +79,18 @@
             <p>COVID-19</p>
           </div>
           <!-- Modal -->
-          <div class="modal fade" id="topCardTwo" tabindex="-1" role="dialog"
-            aria-labelledby="topCardTwoTitle" aria-hidden="true">
+          <div class="modal fade" id="topCardTwo" tabindex="-1" role="dialog" aria-labelledby="topCardTwoTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <h4 class="modal-title">Most Deadly: COVID-19</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <p>Need to fill</p>
                 </div>
               </div>
             </div>
@@ -112,27 +99,23 @@
         </div>
 
         <div class="column">
-          <div class="card" data-toggle="modal" data-target="#topCardTwo">
+          <div class="card" data-toggle="modal" data-target="#topCardThree">
             <h4>Most Common</h4>
             <p>COVID-19</p>
           </div>
           <!-- Modal -->
-          <div class="modal fade" id="topCardTwo" tabindex="-1" role="dialog"
-            aria-labelledby="topCardTwoTitle" aria-hidden="true">
+          <div class="modal fade" id="topCardThree" tabindex="-1" role="dialog" aria-labelledby="topCardThreeTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <h4 class="modal-title">Most Common: COVID-19</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <p>Need to fill</p>
                 </div>
               </div>
             </div>
@@ -141,27 +124,23 @@
         </div>
 
         <div class="column">
-          <div class="card" data-toggle="modal" data-target="#topCardTwo">
+          <div class="card" data-toggle="modal" data-target="#topCardFour">
             <h4>Rarest</h4>
             <p>Zika Virus</p>
           </div>
           <!-- Modal -->
-          <div class="modal fade" id="topCardTwo" tabindex="-1" role="dialog"
-            aria-labelledby="topCardTwoTitle" aria-hidden="true">
+          <div class="modal fade" id="topCardFour" tabindex="-1" role="dialog" aria-labelledby="topCardFourTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <h4 class="modal-title">Rarest: Zika Virus</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <p>Need to fill</p>
                 </div>
               </div>
             </div>
@@ -180,21 +159,7 @@
       <!--remove break later-->
     </div>
 
-    <!--dropdown menu to select specific view-->
-    <!-- <div class="dropdown">
-      <button onclick="dropdownFunction()" class="dropbtn">View</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a onclick="chooseTable(0)" href="#HepAge">Hepatitis By Age</a>
-        <a onclick="chooseTable(1)" href="#HepGen">Hepatitis By Gender</a>
-        <a onclick="chooseTable(2)" href="#HepRac">Hepatitis By Race</a>
-        <a onclick="chooseTable(3)" href="#HepSta">Hepatitis By State</a>
-        <a onclick="chooseTable(4)" href="#HepYea">Hepatitis By Year</a>
-      </div>
-    </div>
-     -->
     <div id="NND-table" class="NND-table section"></div>
-
-
 
     <div class="section-header section" id="COVID">
       <h4>COVID-19 Dashboard</h4>
@@ -207,26 +172,6 @@
     </div>
 
     <div id="COVID-table" class="covid-table section">
-      <!-- <table class="table table-striped table-sm">
-        <thead>
-          <tr>
-            <th>By State</th>
-            <th>[state pulled from database]</th>
-            <th>[state pulled from database]</th>
-            <th>[state pulled from database]</th>
-            <th>[state pulled from database]</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>[filler]</td>
-            <td>[filler]</td>
-            <td>[filler]</td>
-            <td>[filler]</td>
-            <td>[filler]</td>
-          </tr>
-      </table> -->
-      <div class="connection"></div>
     </div>
 
     <div class="row section">
@@ -252,6 +197,7 @@
       </div>
     </div>
 
+    <!--Don't delete yet, its being used as a test space to see if php is returning its echo statement. You can uncomment to see what its returning.-->
     <!-- <div class="connection"></div> -->
 </body>
 
