@@ -8,6 +8,11 @@
 
   <!----css/bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!--particles.js CSS-->
+  <link rel="stylesheet" media="screen" href="particles.js/demo/css/style.css">
+
+  <!--Our CSS stylesheet-->
   <link rel="stylesheet" href="style.css">
 
   <!--scripts-->
@@ -25,180 +30,226 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="top-nav-bar section">
-      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Intelligent Infectious Disease Tracking System</a>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#NND">Nationally Notifiable Diseases</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#COVID">COVID-19</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-              <!--Need to do^-->
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <!-- particles.js container -->
+  <div id="particles-js" style="position: absolute;"></div>
 
-    <div class="tiny-cards container-fluid section">
-      <div class="row">
-        <div class="column">
-          <div class="card" data-toggle="modal" data-target="#topCardOne">
-            <h4>Most Contagious</h4>
-            <p>Measels - R<sub>0</sub> of 18</p>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" id="topCardOne" tabindex="-1" role="dialog" aria-labelledby="topCardOneTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Most Contagious: Measels</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Need to fill</p>
+  <!-- Header -->
+  <div class="top-nav-bar section">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+      <a class="navbar-brand" onClick="window.location.reload();">Intelligent Infectious Disease Tracking System</a>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link">About Us</a>
+            <!--Need to do^-->
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Tiny Cards -->
+  <!--Needs to be filled in, additionally, adding the data-disease-link attribute to a tag like div or p could possibly update the page to show the disease dashboard. however this is untested-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="tiny-cards section">
+          <div class="row">
+            <div class="col">
+              <div class="card" data-toggle="modal" data-target="#topCardOne">
+                <h4>Most Contagious</h4>
+                <p>Measels</p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="topCardOne" tabindex="-1" role="dialog" aria-labelledby="topCardOneTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Most Contagious: Measels</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>What is R<sub>0</sub>?</p>
+                      <p>Sources:</p>
+                      <a style="font-size: 75%;" href="https://www.healthline.com/health/r-nought-reproduction-number">What Is R</a>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <!--Modal-->
             </div>
-          </div>
-          <!--Modal-->
-        </div>
 
-        <div class="column">
-          <div class="card" data-toggle="modal" data-target="#topCardTwo">
-            <h4>Most Deadly</h4>
-            <p>COVID-19</p>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" id="topCardTwo" tabindex="-1" role="dialog" aria-labelledby="topCardTwoTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Most Deadly: COVID-19</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Need to fill</p>
+            <div class="col">
+              <div class="card" data-toggle="modal" data-target="#topCardTwo">
+                <h4>Most Deadly</h4>
+                <p>COVID-19</p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="topCardTwo" tabindex="-1" role="dialog" aria-labelledby="topCardTwoTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Most Deadly: COVID-19</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Need to fill</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <!--Modal-->
             </div>
-          </div>
-          <!--Modal-->
-        </div>
 
-        <div class="column">
-          <div class="card" data-toggle="modal" data-target="#topCardThree">
-            <h4>Most Common</h4>
-            <p>COVID-19</p>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" id="topCardThree" tabindex="-1" role="dialog" aria-labelledby="topCardThreeTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Most Common: COVID-19</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Need to fill</p>
+            <div class="col">
+              <div class="card" data-toggle="modal" data-target="#topCardThree">
+                <h4>Most Common</h4>
+                <p>COVID-19</p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="topCardThree" tabindex="-1" role="dialog" aria-labelledby="topCardThreeTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Most Common: COVID-19</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Need to fill</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <!--Modal-->
             </div>
-          </div>
-          <!--Modal-->
-        </div>
 
-        <div class="column">
-          <div class="card" data-toggle="modal" data-target="#topCardFour">
-            <h4>Rarest</h4>
-            <p>Zika Virus</p>
-          </div>
-          <!-- Modal -->
-          <div class="modal fade" id="topCardFour" tabindex="-1" role="dialog" aria-labelledby="topCardFourTitle"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h4 class="modal-title">Rarest: Zika Virus</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>Need to fill</p>
+            <div class="col">
+              <div class="card" data-toggle="modal" data-target="#topCardFour">
+                <h4>Rarest</h4>
+                <p>Zika Virus</p>
+              </div>
+              <!-- Modal -->
+              <div class="modal fade" id="topCardFour" tabindex="-1" role="dialog" aria-labelledby="topCardFourTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Rarest: Zika Virus</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Need to fill</p>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <!--Modal-->
             </div>
           </div>
-          <!--Modal-->
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="section-header section" id="NND">
-      <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
-    </div>
-    <div class="tableau tableau-NND section">
-      <h5>[div space for tableu-NND data]</h5>
-      <br>
-      <!--remove break later-->
-    </div>
-
-    <div id="NND-table" class="NND-table section"></div>
-
-    <div class="section-header section" id="COVID">
-      <h4>COVID-19 Dashboard</h4>
-    </div>
-
-    <div class="tableau tableau-COVID section">
-      <h5>[div space for tableu-covid data]</h5>
-      <br>
-      <!--remove break later-->
-    </div>
-
-    <div id="COVID-table" class="covid-table section">
-    </div>
-
+  <!-- Dashboard -->
+  <div class="container-fluid" style="position: relative;">
     <div class="row section">
-      <div class="column col-lg-6">
-        <div class="card" id="twitter-stream">
-          <a class="twitter-timeline" data-lang="en" data-height="555" data-theme="dark"
-            href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw">Tweets by CDCgov</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+
+      <!--Links section-->
+      <!--needs to be edited to have the design we want, each disease must have the attribute data-disease-link="something", -->
+      <div class="col-2">
+        <ul>
+          <li>
+            <button class="btn btn-link" type="button" data-disease-link="covid">covid</button>
+          </li>
+          <li>
+            <button class="btn btn-link" type="button" data-disease-link="1">LInk 1</button>
+          </li>
+          <li>
+            <button class="btn btn-link" type="button" data-disease-link="2">LInk 2</button>
+          </li>
+          <li>
+            <button class="btn btn-link" type="button" data-disease-link="3">LInk 3</button>
+          </li>
+        </ul>
       </div>
 
-      <div class="column col-lg-6">
-        <div class="card WordCloud">
-          <div class="card-header-WordCloud">
-            <h4>Word Cloud</h4>
-          </div>
-          <div class="card-body">
-            <div class="text-center">
-              <img class="img-fluid" style="width: max-content;" src="WordCloud03232021.png">
+      <!--Disease Dashboards-->
+      <!--This section layout is set, however, if we change the data-disease-link value, we must change the data-disease-dashboard value so they are equal to each other and will show the correct disease dashboard. Every div containing the dashboard will have the style="display: none;" EXCEPT the first one because thats our covid/home dashboard  -->
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <div data-disease-dashboard="covid">
+              <div class="section-header section" id="COVID">
+                <h4>COVID-19 Dashboard</h4>
+              </div>
+              covid
+
+              <!--Cards for Twitter timeline and Word Cloud-->
+              <div class="row">
+                <div class="col-6">
+                  <div class="card" id="twitter-stream">
+                    <a class="twitter-timeline" data-lang="en" data-height="555" data-theme="dark"
+                      href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw">Tweets by CDCgov</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                  </div>
+                </div>
+
+                <div class="col-6">
+                  <div class="card WordCloud">
+                    <div class="card-header-WordCloud">
+                      <h4>Word Cloud</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="text-center">
+                        <img class="img-fluid" style="width: max-content;" src="WordCloud03232021.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="display: none;" data-disease-dashboard="1">
+              <div class="section-header sectio" id="NND">
+                <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
+              </div>
+              Dashboard 1
+            </div>
+            <div style="display: none;" data-disease-dashboard="2">
+              <div class="section-header sectio" id="NND">
+                <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
+              </div>
+              Dashboard 2
+            </div>
+            <div style="display: none;" data-disease-dashboard="3">
+              <div class="section-header sectio" id="NND">
+                <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
+              </div>
+              Dashboard 3
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!--Don't delete yet, its being used as a test space to see if php is returning its echo statement. You can uncomment to see what its returning.-->
-    <!-- <div class="connection"></div> -->
+  <!-- Scripts for background -->
+  <script src="particles.js/particles.js"></script>
+  <script src="particles.js/demo/js/app.js"></script>
+
+  <!--Don't delete yet, its being used as a test space to see if php is returning its echo statement. You can uncomment to see what its returning.-->
+  <!-- <div class="connection"></div> -->
 </body>
 
 </html>

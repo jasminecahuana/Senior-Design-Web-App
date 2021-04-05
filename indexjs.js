@@ -1,37 +1,33 @@
-updateCovid()
-
-//was playing around with lines 4-22, will delete after some testing
-function testWebsite() {
-  const tableRef = useRef(null);
-  const wrapperRef = document.getElementById("covid-table");
-  
-  useEffect(() => {
-    const grid = new Grid({
-      from: tableRef.current,
-    }).render(wrapperRef.current);
-  });
-
-  $.ajax({
-    url: "getCovid.php",
-    success: function (result) {
-      return (
-        result
-      );
-    }
-  });
-}
-
-function updateCovid() {
-  $.ajax({
-    url: "getCovid.php",
-    success: function (result) {
-      stateCOVIDData = result;
-      $('.connection').html(result);
-    }
-  });
-}
+//updateCovid is meant to check if the website is able to connect to the database and will display covid data straight from the database. In the HTML, you'll need to uncomment  <div class="connection"></div> located at the bottom of the file. this function will get modified/deleted eventually. 
+// updateCovid()
+// function updateCovid() {
+//   $.ajax({
+//     url: "getCovid.php",
+//     success: function (result) {
+//       stateCOVIDData = result;
+//       $('.connection').html(result);
+//     }
+//   });
+// }
 
 // for tiny-cards container-fluid section
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
-})
+});
+
+$(document).ready(function () {
+  var links = document.querySelectorAll('[data-disease-link]');
+  var dashboards = document.querySelectorAll('[data-disease-dashboard]');
+
+  links.forEach(function (link) {
+    link.addEventListener('click', function () {
+      dashboards.forEach(function (dashboard) {
+        if (dashboard.dataset.diseaseDashboard === link.dataset.diseaseLink) {
+          dashboard.style.display = 'block';
+        } else {
+          dashboard.style.display = 'none';
+        }
+      })
+    })
+  })
+});
