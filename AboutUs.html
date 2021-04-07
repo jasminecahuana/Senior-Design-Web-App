@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  text-align: center;
+  background-color: #6f7277;
+}
+
+html {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+}
+.col {
+  display: table-cell;
+  padding: 16px;
+}
+
+.column {
+  display: table-cell;
+  /* padding: 16px; */
+  /* float: left; */
+  width: 25%;
+  /* margin-bottom: 16px; */
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  padding-bottom: 10px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  /* display: table; */
+}
+
+.title {
+  color: grey;
+}
+
+h2 {
+  font-size: large !important;
+}
+
+.nav-link {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-nav-bar section">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" onClick="window.location.reload();">About Us</a>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <div class="navbar-nav ml-auto">
+        <div class="nav-item">
+          <a href="index.html" class="nav-link">Go Back</a>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="col-container">
+  <div class="column">
+    <div class="card">
+      <img src="flavian.jfif" alt="Flavian" style="width:50%" class="center">
+      <div class="container">
+        <h2><strong>Flavian Rosca</strong></h2>
+        <p class="title">Team Leader</p>
+        <p>Flavian Rosca is a senior majoring in Computer Science at Cleveland State University 
+          with an expected graduation date of May 2021. He is currently an Oracle Applications Analyst (HRMS)
+           at Sherwin-Williams while enrolled as a part-time student. Flavian is also a co-owner of a small web 
+           development and digital marketing company called ideaowl.</p>
+        <a href="https://www.linkedin.com/in/flavero/">Flavian's LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="jasmine.jfif" alt="Jasmine" style="width:50%" class="center">
+      <div class="container">
+        <h2><strong>Jasmine Cahuana</strong></h2>
+        <p class="title">Team Member</p>
+        <p>Jasmine Cahuana is a senior at Cleveland State University majoring in Computer Science and 
+            minoring in Mathematics, and she graduates May 2021. She currently works as an Hourly 
+            Cybersecurity Analyst at the Federal Reserve Bank of Cleveland. 
+            Post-graduation, Jasmine will work as an Associate Cybersecurity Analyst at the same company.</p>
+        <a href="https://www.linkedin.com/in/jasmine-cahuana-633188133/">Jasmine's LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="pria.jfif" alt="Ditipriya" style="width:50%" class="center">
+      <div class="container">
+        <h2><strong>Ditipriya (Pria) Chakraborty</strong></h2>
+        <p class="title">Team Member</p>
+        <p>Pria Chakraborty is a senior majoring in Computer Engineering, along 
+            with minoring in Computer Science and Mathematics. She graduates May 2021 
+            from Cleveland State University. Pria currently works at STERIS Corp as an 
+            IT Applications & Cybersecurity Intern and will be joining Keybank Corp post-graduation 
+            as a Key Tech and Operations Analyst.</p>
+        <a href="https://www.linkedin.com/in/ditipriya-chakraborty-a710bb161/">Pria's LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="ines.jfif" alt="Ines" style="width:50%" class="center">
+      <div class="container">
+        <h2><strong>Ines Deric</strong></h2>
+        <p class="title">Team Member</p>
+        <p>Ines Deric is a senior at Cleveland State University majoring in Computer Science 
+            and minoring in Mathematics, with an expected graduation date of May 2021. 
+            Currently, she is working as an Application Development Intern at JOANN Stores Headquarters. 
+            Ines will become an Associate Application Engineer post-graduation at the same company. </p>
+        <a href="https://www.linkedin.com/in/ines-deric/">Ines's LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
