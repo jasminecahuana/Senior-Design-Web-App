@@ -9,9 +9,73 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
+  margin: 0;
 }
 
-h4{
+/* Navigation menu before it's open  */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2e2e35;
+  overflow-x: auto;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+/* Navigation menu after it's open */
+.sidenav a {
+  padding: 1px 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #9d9ea7;
+  display: block;
+  transition: 0.3s;
+  width: auto;
+}
+/* Hovering over a menu selection */
+.sidenav ul li a:hover {
+  background-color: #a2a2aa;
+}
+
+/* Navigation close menu button */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.btn-link {
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+a {
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+h3 {
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  padding: 15px;
+  background-color: rgb(58, 57, 61);
+}
+h4 {
   margin-top:8px;
   color:white;
 }
@@ -20,13 +84,14 @@ p{
   color:white;
 }
 
+
 /* Responsive columns */
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
-    display: block;
+    width: 75%;
+    display: block; 
     /* margin-bottom: 20px; */
-  }
+   }
 }
 
 /* Style the counter cards */
@@ -72,4 +137,3 @@ p{
   pointer-events: all;
   background-color: #343a40;
 }
-/*end*/

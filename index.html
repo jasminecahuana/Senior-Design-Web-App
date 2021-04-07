@@ -30,19 +30,19 @@
 </head>
 
 <body>
+  <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Infectious Disease Datasets</span> -->
   <!-- particles.js container -->
   <div id="particles-js" style="position: fixed;"></div>
 
   <!-- Header -->
   <div class="top-nav-bar section">
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-      <a class="navbar-brand" onClick="window.location.reload();">Intelligent Infectious Disease Tracking System</a>
+      <a class="navbar-brand" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Intelligent Infectious Disease Tracking System</a>
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link">About Us</a>
-            <!--Need to do^-->
-          </li>
+        <div class="navbar-nav ml-auto">
+          <div class="nav-item">
+            <a href="AboutUs.html" class="nav-link">About Us</a>
+          </div>
         </ul>
       </div>
     </nav>
@@ -58,7 +58,7 @@
             <div class="col">
               <div class="card" data-toggle="modal" data-target="#topCardOne">
                 <h4>Most Contagious</h4>
-                <p>Measels</p>
+                <p>Measles - R<sub>0</sub> of 12-18</p>
               </div>
               <!-- Modal -->
               <div class="modal fade" id="topCardOne" tabindex="-1" role="dialog" aria-labelledby="topCardOneTitle"
@@ -66,15 +66,20 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Most Contagious: Measels</h4>
+                      <h4 class="modal-title">Most Contagious: Measles</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      <p>What is R<sub>0</sub>?</p>
-                      <p>Sources:</p>
-                      <a style="font-size: 75%;" href="https://www.healthline.com/health/r-nought-reproduction-number">What Is R</a>
+                      <p>Click this link to find more IIDTS data about Measles.</p>
+                      <button class="btn btn-link" type="button" data-disease-link="Measles">(Measles)</button>
+                      <p><strong>What is R<sub>0</sub>?</strong></p>
+                      <p>R<sub>0</sub> is a mathematical term that is used to indicate how infectious a disease is. 
+                        An R<sub>0</sub> of a certain value tells the average amount of people that will contract the disease
+                        from someone who has it. For example, a disease with an R<sub>0</sub> of 10 means the infectious 
+                        disease will be transmitted to an average of 10 people.<a href="https://www.healthline.com/health/r-nought-reproduction-number"> (Source)</a> 
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -99,7 +104,8 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <p>Need to fill</p>
+                      <p>Click this link to find more IIDTS data about COVID-19.</p>
+                      <button class="btn btn-link" type="button" data-disease-link="COVID-19">(COVID-19)</button>
                     </div>
                   </div>
                 </div>
@@ -124,7 +130,8 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <p>Need to fill</p>
+                      <p>Click this link to find more IIDTS data about COVID-19.</p>
+                      <button class="btn btn-link" type="button" data-disease-link="COVID-19">(COVID-19)</button>
                     </div>
                   </div>
                 </div>
@@ -134,7 +141,7 @@
 
             <div class="col">
               <div class="card" data-toggle="modal" data-target="#topCardFour">
-                <h4>Rarest</h4>
+                <h4>Most Rare</h4>
                 <p>Zika Virus</p>
               </div>
               <!-- Modal -->
@@ -143,13 +150,14 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title">Rarest: Zika Virus</h4>
+                      <h4 class="modal-title">Most Rare: Zika Virus</h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
-                      <p>Need to fill</p>
+                      <p>Click this link to find more IIDTS data about Zika Virus.</p>
+                      <button class="btn btn-link" type="button" data-disease-link="Zika Virus">(Zika Virus)</button>
                     </div>
                   </div>
                 </div>
@@ -164,23 +172,132 @@
 
   <!-- Dashboard -->
   <div class="container-fluid" style="position: relative;">
-    <div class="row section">
-
       <!--Links section-->
-      <!--needs to be edited to have the design we want, each disease must have the attribute data-disease-link="something", -->
-      <div class="col-2">
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <ul>
           <li>
-            <button class="btn btn-link" type="button" data-disease-link="covid">covid</button>
+            <h3>Infectious Diseases</h3> 
           </li>
           <li>
-            <button class="btn btn-link" type="button" data-disease-link="1">LInk 1</button>
+            <a data-disease-link="COVID-19"><button class="btn btn-link" type="button" data-disease-link="COVID-19">COVID-19</button></a>
           </li>
           <li>
-            <button class="btn btn-link" type="button" data-disease-link="2">LInk 2</button>
+            <a data-disease-link="Anaplasmosis"><button class="btn btn-link" type="button" data-disease-link="Anaplasmosis">Anaplasmosis</button></a>
           </li>
           <li>
-            <button class="btn btn-link" type="button" data-disease-link="3">LInk 3</button>
+            <a data-disease-link="Babesiosis"><button class="btn btn-link" type="button" data-disease-link="Babesiosis">Babesiosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Botulism"><button class="btn btn-link" type="button" data-disease-link="Botulism">Botulism</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Brucellosis"><button class="btn btn-link" type="button" data-disease-link="Brucellosis">Brucellosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Campylobacteriosis"><button class="btn btn-link" type="button" data-disease-link="Campylobacteriosis">Campylobacteriosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Candida Auris"><button class="btn btn-link" type="button" data-disease-link="Candida Auris">Candida Auris</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Chancroid"><button class="btn btn-link" type="button" data-disease-link="Chancroid">Chancroid</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Chlamydia"><button class="btn btn-link" type="button" data-disease-link="Chlamydia">Chlamydia</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Coccidioidomycosis"><button class="btn btn-link" type="button" data-disease-link="Coccidioidomycosis">Coccidioidomycosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Congenital Syphilis"><button class="btn btn-link" type="button" data-disease-link="Congenital Syphilis">Congenital Syphilis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Cryptosporidiosis"><button class="btn btn-link" type="button" data-disease-link="Cryptosporidiosis">Cryptosporidiosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Dengue"><button class="btn btn-link" type="button" data-disease-link="Dengue">Dengue</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Ehrlichiosis"><button class="btn btn-link" type="button" data-disease-link="Ehrlichiosis">Ehrlichiosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Giardiasis"><button class="btn btn-link" type="button" data-disease-link="Giardiasis">Giardiasis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Gonorrhea"><button class="btn btn-link" type="button" data-disease-link="Gonorrhea">Gonorrhea</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Haemophilus Influenzae"><button class="btn btn-link" type="button" data-disease-link="Haemophilus Influenzae">Haemophilus Influenzae</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Hantavirus Infection"><button class="btn btn-link" type="button" data-disease-link="Hantavirus Infection">Hantavirus Infection</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Hepatitis A"><button class="btn btn-link" type="button" data-disease-link="Hepatitis A">Hepatitis A</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Hepatitis B"><button class="btn btn-link" type="button" data-disease-link="Hepatitis B">Hepatitis B</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Hepatitis C"><button class="btn btn-link" type="button" data-disease-link="Hepatitis C">Hepatitis C</button></a>
+          </li>
+          <li>
+            <a data-disease-link="HIV"><button class="btn btn-link" type="button" data-disease-link="HIV">HIV</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Influenza A Virus"><button class="btn btn-link" type="button" data-disease-link="Influenza A Virus">Influenza A Virus</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Legionellosis"><button class="btn btn-link" type="button" data-disease-link="Legionellosis">Legionellosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Lyme Disease"><button class="btn btn-link" type="button" data-disease-link="Lyme Disease">Lyme Disease</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Measles"><button class="btn btn-link" type="button" data-disease-link="Measles">Measles</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Meningococcal Disease"><button class="btn btn-link" type="button" data-disease-link="Meningococcal Disease">Meningococcal Disease</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Mumps"><button class="btn btn-link" type="button" data-disease-link="Mumps">Mumps</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Pertussis"><button class="btn btn-link" type="button" data-disease-link="Pertussis">Pertussis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Plague"><button class="btn btn-link" type="button" data-disease-link="Plague">Plague</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Pneumococcal Disease"><button class="btn btn-link" type="button" data-disease-link="Pneumococcal Disease">Pneumococcal Disease</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Q Fever"><button class="btn btn-link" type="button" data-disease-link="Q Fever">Q Fever</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Rabies (Human)"><button class="btn btn-link" type="button" data-disease-link="Rabies (Human)">Rabies (Human)</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Spotted Fever"><button class="btn btn-link" type="button" data-disease-link="Spotted Fever">Spotted Fever</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Syphilis"><button class="btn btn-link" type="button" data-disease-link="Syphilis">Syphilis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Trichinellosis"><button class="btn btn-link" type="button" data-disease-link="Trichinellosis">Trichinellosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Tuberculosis"><button class="btn btn-link" type="button" data-disease-link="Tuberculosis">Tuberculosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Tularemia"><button class="btn btn-link" type="button" data-disease-link="Tularemia">Tularemia</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Vibrosis"><button class="btn btn-link" type="button" data-disease-link="Vibrosis">Vibrosis</button></a>
+          </li>
+          <li>
+            <a data-disease-link="Zika Virus"><button class="btn btn-link" type="button" data-disease-link="Zika Virus">Zika Virus</button></a>
           </li>
         </ul>
       </div>
@@ -190,11 +307,12 @@
       <div class="col">
         <div class="row">
           <div class="col">
-            <div data-disease-dashboard="covid">
+            <!-- Covid data / homepage -->
+            <div data-disease-dashboard="COVID-19">
               <div class="section-header section" id="COVID">
                 <h4>COVID-19 Dashboard</h4>
               </div>
-              covid
+              COVID-19 Dashboard Placeholder
 
               <!--Cards for Twitter timeline and Word Cloud-->
               <div class="row">
@@ -220,27 +338,245 @@
                 </div>
               </div>
             </div>
-            <div style="display: none;" data-disease-dashboard="1">
-              <div class="section-header sectio" id="NND">
-                <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
+            <!-- Diseases besides Covid  -->
+            <div style="display: none;" data-disease-dashboard="Anaplasmosis">
+              <div class="section-header section" id="NND">
+                <h4>Anaplasmosis Dashboard</h4>
               </div>
-              Dashboard 1
+              Anaplasmosis Dashboard Placeholder
             </div>
-            <div style="display: none;" data-disease-dashboard="2">
-              <div class="section-header sectio" id="NND">
-                <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
+            <div style="display: none;" data-disease-dashboard="Babesiosis">
+              <div class="section-header section" id="NND">
+                <h4>Babesiosis Dashboard</h4>
               </div>
-              Dashboard 2
+              Babesiosis Dashboard Placeholder
             </div>
-            <div style="display: none;" data-disease-dashboard="3">
-              <div class="section-header sectio" id="NND">
-                <h4>Nationally Notifiable Infectious Diseases Dashboard</h4>
+            <div style="display: none;" data-disease-dashboard="Botulism">
+              <div class="section-header section" id="NND">
+                <h4>Botulism Dashboard</h4>
               </div>
-              Dashboard 3
+              Botulism Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Brucellosis">
+              <div class="section-header section" id="NND">
+                <h4>Brucellosis Dashboard</h4>
+              </div>
+              Brucellosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Campylobacteriosis">
+              <div class="section-header section" id="NND">
+                <h4>Campylobacteriosis Dashboard</h4>
+              </div>
+              Campylobacteriosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Candida Auris">
+              <div class="section-header section" id="NND">
+                <h4>Candida Auris Dashboard</h4>
+              </div>
+              Candida Auris Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Chancroid">
+              <div class="section-header section" id="NND">
+                <h4>Chancroid Dashboard</h4>
+              </div>
+              Chancroid Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Chlamydia">
+              <div class="section-header section" id="NND">
+                <h4>Chlamydia Dashboard</h4>
+              </div>
+              Chlamydia Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Coccidioidomycosis">
+              <div class="section-header section" id="NND">
+                <h4>Coccidioidomycosis Dashboard</h4>
+              </div>
+              Coccidioidomycosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Congenital Syphilis">
+              <div class="section-header section" id="NND">
+                <h4>Congenital Syphilis Dashboard</h4>
+              </div>
+              Congenital Syphilis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Cryptosporidiosis">
+              <div class="section-header section" id="NND">
+                <h4>Cryptosporidiosis Dashboard</h4>
+              </div>
+              Cryptosporidiosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Dengue">
+              <div class="section-header section" id="NND">
+                <h4>Dengue Dashboard</h4>
+              </div>
+              Dengue Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Ehrlichiosis">
+              <div class="section-header section" id="NND">
+                <h4>Ehrlichiosis Dashboard</h4>
+              </div>
+              Ehrlichiosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Giardiasis">
+              <div class="section-header section" id="NND">
+                <h4>Giardiasis Dashboard</h4>
+              </div>
+              Giardiasis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Gonorrhea">
+              <div class="section-header section" id="NND">
+                <h4>Gonorrhea Dashboard</h4>
+              </div>
+              Gonorrhea Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Haemophilus Influenzae">
+              <div class="section-header section" id="NND">
+                <h4>Haemophilus Influenzae Dashboard</h4>
+              </div>
+              Haemophilus Influenzae Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Hantavirus Infection">
+              <div class="section-header section" id="NND">
+                <h4>Hantavirus Infection Dashboard</h4>
+              </div>
+              Hantavirus Infection Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Hepatitis A">
+              <div class="section-header section" id="NND">
+                <h4>Hepatitis A Dashboard</h4>
+              </div>
+              Hepatitis A Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Hepatitis B">
+              <div class="section-header section" id="NND">
+                <h4>Hepatitis B Dashboard</h4>
+              </div>
+              Hepatitis B Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Hepatitis C">
+              <div class="section-header section" id="NND">
+                <h4>Hepatitis C Dashboard</h4>
+              </div>
+              Hepatitis C Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="HIV">
+              <div class="section-header section" id="NND">
+                <h4>HIV Dashboard</h4>
+              </div>
+              HIV Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Invasive Pneumococcal Disease">
+              <div class="section-header section" id="NND">
+                <h4>Invasive Pneumococcal Disease Dashboard</h4>
+              </div>
+              Invasive Pneumococcal Disease Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Legionellosis">
+              <div class="section-header section" id="NND">
+                <h4>Legionellosis Dashboard</h4>
+              </div>
+              Legionellosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Lyme Disease">
+              <div class="section-header section" id="NND">
+                <h4>Lyme Disease Dashboard</h4>
+              </div>
+              Lyme Disease Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Measles">
+              <div class="section-header section" id="NND">
+                <h4>Measles Dashboard</h4>
+              </div>
+              Measles Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Meningococcal Disease">
+              <div class="section-header section" id="NND">
+                <h4>Meningococcal Disease Dashboard</h4>
+              </div>
+              Meningococcal Disease Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Mumps">
+              <div class="section-header section" id="NND">
+                <h4>Mumps Dashboard</h4>
+              </div>
+              Mumps Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Novel Influenza A Virus Infections">
+              <div class="section-header section" id="NND">
+                <h4>Novel Influenza A Virus Infections Dashboard</h4>
+              </div>
+              Novel Influenza A Virus Infections Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Pertussis">
+              <div class="section-header section" id="NND">
+                <h4>Pertussis Dashboard</h4>
+              </div>
+              Pertussis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Plague">
+              <div class="section-header section" id="NND">
+                <h4>Plague Dashboard</h4>
+              </div>
+              Plague Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Q Fever">
+              <div class="section-header section" id="NND">
+                <h4>Q Fever Dashboard</h4>
+              </div>
+              Q Fever Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Rabies (Human)">
+              <div class="section-header section" id="NND">
+                <h4>Rabies (Human) Dashboard</h4>
+              </div>
+              Rabies (Human) Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Spotted Fever Rickettsiosis">
+              <div class="section-header section" id="NND">
+                <h4>Spotted Fever Rickettsiosis Dashboard</h4>
+              </div>
+              Spotted Fever Rickettsiosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Syphilis">
+              <div class="section-header section" id="NND">
+                <h4>Syphilis Dashboard</h4>
+              </div>
+              Syphilis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Trichinellosis">
+              <div class="section-header section" id="NND">
+                <h4>Trichinellosis Dashboard</h4>
+              </div>
+              Trichinellosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Tuberculosis">
+              <div class="section-header section" id="NND">
+                <h4>Tuberculosis Dashboard</h4>
+              </div>
+              Tuberculosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Tularemia">
+              <div class="section-header section" id="NND">
+                <h4>Tularemia Dashboard</h4>
+              </div>
+              Tularemia Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Vibrosis">
+              <div class="section-header section" id="NND">
+                <h4>Vibrosis Dashboard</h4>
+              </div>
+              Vibrosis Dashboard Placeholder
+            </div>
+            <div style="display: none;" data-disease-dashboard="Zika Virus">
+              <div class="section-header section" id="NND">
+                <h4>Zika Virus Dashboard</h4>
+              </div>
+              Zika Virus Dashboard Placeholder
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 
