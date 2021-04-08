@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Line 1125, Line 313 -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -28,8 +28,8 @@
   <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
 
   <!--Our Source Script-->
-  <script src="indexjs.js" defer></script>
-  <!-- <script src="getDiseaseData.js" defer></script> -->
+  <script src="indexjs.js"></script>
+  <script src="getDiseaseData.js"></script>
 
   <title>SDTest</title>
 </head>
@@ -279,6 +279,10 @@
               data-disease-link="Influenza A Virus">Influenza A Virus</button></a>
         </li>
         <li>
+          <a data-disease-link="Invasive Pneumococcal Disease"><button class="btn btn-link" type="button"
+              data-disease-link="Invasive Pneumococcal Disease">Invasive Pneumococcal Disease</button></a>
+        </li>
+        <li>
           <a data-disease-link="Legionellosis"><button class="btn btn-link" type="button"
               data-disease-link="Legionellosis">Legionellosis</button></a>
         </li>
@@ -306,6 +310,7 @@
           <a data-disease-link="Plague"><button class="btn btn-link" type="button"
               data-disease-link="Plague">Plague</button></a>
         </li>
+        <!-- !!!!! is this different from Invasive Pneumoccal Disease? -->
         <li>
           <a data-disease-link="Pneumococcal Disease"><button class="btn btn-link" type="button"
               data-disease-link="Pneumococcal Disease">Pneumococcal Disease</button></a>
@@ -354,7 +359,7 @@
     <div class="col">
       <div class="row">
         <div class="col">
-            
+
           <!-- Covid data / homepage -->
           <div data-disease-dashboard="COVID-19">
             <div class="section-header section" id="COVID">
@@ -364,8 +369,8 @@
 
             <div class="row">
               <div class=col-12>
-                <div class="card">
-                  <table class="display" style="width:100%">
+                <div class="card dashboard">
+                 <table id="covid" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
@@ -408,11 +413,11 @@
               <h4>Anaplasmosis Dashboard</h4>
             </div>
             Anaplasmosis Dashboard Placeholder
-            
-            <!-- <div class="row">
+
+            <div class="row">
               <div class=col-12>
-                <div class="card">
-                  <table class="display" style="width:100%">
+                <div class="card dashboard">
+                 <table id="Anaplasmosis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
@@ -422,241 +427,1022 @@
                   </table>
                 </div>
               </div>
-            </div> -->
+            </div>
+
+          </div>
 
           <div style="display: none;" data-disease-dashboard="Babesiosis">
             <div class="section-header section" id="NND">
               <h4>Babesiosis Dashboard</h4>
             </div>
             Babesiosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Babesiosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Botulism">
             <div class="section-header section" id="NND">
               <h4>Botulism Dashboard</h4>
             </div>
             Botulism Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Botulism" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Transmission Category</th>
+                        <th>Cases</th>
+                        <th>Age Range</th>
+                        <th>Median Age</th>
+                        <th>Deaths</th>
+                        <th>Male</th>
+                        <th>Female</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Brucellosis">
             <div class="section-header section" id="NND">
               <h4>Brucellosis Dashboard</h4>
             </div>
             Brucellosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Brucellosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases (2010)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Campylobacteriosis">
             <div class="section-header section" id="NND">
               <h4>Campylobacteriosis Dashboard</h4>
             </div>
             Campylobacteriosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Campylobacteriosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Food Category</th>
+                        <th>Outbreaks (2010-2017)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Candida Auris">
             <div class="section-header section" id="NND">
               <h4>Candida Auris Dashboard</h4>
             </div>
             Candida Auris Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Candida" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases (as of 2020)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Chancroid">
             <div class="section-header section" id="NND">
               <h4>Chancroid Dashboard</h4>
             </div>
             Chancroid Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Chancroid" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Chlamydia">
             <div class="section-header section" id="NND">
               <h4>Chlamydia Dashboard</h4>
             </div>
             Chlamydia Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Chlamydia" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population))</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Coccidioidomycosis">
             <div class="section-header section" id="NND">
               <h4>Coccidioidomycosis Dashboard</h4>
             </div>
             Coccidioidomycosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Coccidioidomycosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Arizona</th>
+                        <th>California</th>
+                        <th>Nevada, New Mexico, and Utah</th>
+                        <th>Other states</th>
+                        <th>Total</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
           </div>
           <div style="display: none;" data-disease-dashboard="Congenital Syphilis">
             <div class="section-header section" id="NND">
               <h4>Congenital Syphilis Dashboard</h4>
             </div>
             Congenital Syphilis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Congenital" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Race/Ethnicity of Mother</th>
+                        <th>2008 (Cases)</th>
+                        <th>2009 (Cases)</th>
+                        <th>2010 (Cases)</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Cryptosporidiosis">
             <div class="section-header section" id="NND">
               <h4>Cryptosporidiosis Dashboard</h4>
             </div>
             Cryptosporidiosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Cryptosporidiosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases (2018)</th>
+                        <th>Rate per 100K population (2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Dengue">
             <div class="section-header section" id="NND">
               <h4>Dengue Dashboard</h4>
             </div>
             Dengue Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Dengue" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2017 Travel-Associated Cases(N=451)</th>
+                        <th>2017 Rate (%)</th>
+                        <th>2018 Travel-Associated Cases(N=478)</th>
+                        <th>2018 Rate (%)</th>
+                        <th>2019 Travel-Associated Cases(N=1,183)</th>
+                        <th>2019 Rate (%)</th>
+                        <th>2020 Travel-Associated Cases (N=218)</th>
+                        <th>2020 Rate (%)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Ehrlichiosis">
             <div class="section-header section" id="NND">
               <h4>Ehrlichiosis Dashboard</h4>
             </div>
             Ehrlichiosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Ehrlichiosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases per Million (2000-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Giardiasis">
             <div class="section-header section" id="NND">
               <h4>Giardiasis Dashboard</h4>
             </div>
             Giardiasis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Giardiasis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases</th>
+                        <th>Rate (%)</th>
+                        <th>Number of Outbreak-Associated Cases</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Gonorrhea">
             <div class="section-header section" id="NND">
               <h4>Gonorrhea Dashboard</h4>
             </div>
             Gonorrhea Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Gonorrhea" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Haemophilus Influenzae">
             <div class="section-header section" id="NND">
               <h4>Haemophilus Influenzae Dashboard</h4>
             </div>
             Haemophilus Influenzae Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Haemophilus" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Race</th>
+                        <th>Cases</th>
+                        <th>Rate per 100K population</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Hantavirus Infection">
             <div class="section-header section" id="NND">
               <h4>Hantavirus Infection Dashboard</h4>
             </div>
             Hantavirus Infection Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Hantavirus" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases (1993-2017)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Hepatitis A">
             <div class="section-header section" id="NND">
               <h4>Hepatitis A Dashboard</h4>
             </div>
             Hepatitis A Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Hepatitis-A" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population))</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Hepatitis B">
             <div class="section-header section" id="NND">
               <h4>Hepatitis B Dashboard</h4>
             </div>
             Hepatitis B Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Hepatitis-B" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population))</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Hepatitis C">
             <div class="section-header section" id="NND">
               <h4>Hepatitis C Dashboard</h4>
             </div>
             Hepatitis C Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Hepatitis-C" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Race/Ethnicity</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="HIV">
             <div class="section-header section" id="NND">
               <h4>HIV Dashboard</h4>
             </div>
             HIV Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="HIV" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Race</th>
+                        <th>2014 (Estimated Cases)</th>
+                        <th>2015 (Estimated Cases)</th>
+                        <th>2016 (Estimated Cases)</th>
+                        <th>2017 (Estimated Cases)</th>
+                        <th>2018 (Estimated Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div style="display: none;" data-disease-dashboard="Influenza A Virus">
+            <div class="section-header section" id="NND">
+              <h4>Influenza A Virus Dashboard</h4>
+            </div>
+            Influenza A Virus Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Influenza-A-Virus" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases per Million (2000-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Invasive Pneumococcal Disease">
             <div class="section-header section" id="NND">
               <h4>Invasive Pneumococcal Disease Dashboard</h4>
             </div>
             Invasive Pneumococcal Disease Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Invasive-Pneumococcal-Disease" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Cases (2016)</th>
+                        <th>Rate (per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Legionellosis">
             <div class="section-header section" id="NND">
               <h4>Legionellosis Dashboard</h4>
             </div>
             Legionellosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Legionellosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Lyme Disease">
             <div class="section-header section" id="NND">
               <h4>Lyme Disease Dashboard</h4>
             </div>
             Lyme Disease Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Lyme" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2009 (Cases)</th>
+                        <th>2010 (Cases)</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Measles">
             <div class="section-header section" id="NND">
               <h4>Measles Dashboard</h4>
             </div>
             Measles Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Measles" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Meningococcal Disease">
             <div class="section-header section" id="NND">
               <h4>Meningococcal Disease Dashboard</h4>
             </div>
             Meningococcal Disease Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Meningococcal-Disease" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Mumps">
             <div class="section-header section" id="NND">
               <h4>Mumps Dashboard</h4>
             </div>
             Mumps Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Mumps" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Novel Influenza A Virus Infections">
+            <!-- !!!!!!!! Is this supposed to be here? -->
             <div class="section-header section" id="NND">
               <h4>Novel Influenza A Virus Infections Dashboard</h4>
             </div>
             Novel Influenza A Virus Infections Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Babesiosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases per Million (2000-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Pertussis">
             <div class="section-header section" id="NND">
               <h4>Pertussis Dashboard</h4>
             </div>
             Pertussis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Pertussis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Plague">
             <div class="section-header section" id="NND">
               <h4>Plague Dashboard</h4>
             </div>
             Plague Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Plague" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                        <th>Deaths</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Q Fever">
             <div class="section-header section" id="NND">
               <h4>Q Fever Dashboard</h4>
             </div>
             Q Fever Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Q-Fever" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Total Cases (2001-2018)</th>
+                        <th>Male Cases (2001-2018)</th>
+                        <th>Female Cases (2001-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Rabies (Human)">
             <div class="section-header section" id="NND">
               <h4>Rabies (Human) Dashboard</h4>
             </div>
             Rabies (Human) Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Rabies-(Human)" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases per Million (2000-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div style="display: none;" data-disease-dashboard="Spotted Fever Rickettsiosis">
+          <div style="display: none;" data-disease-dashboard="Spotted Fever">
             <div class="section-header section" id="NND">
               <h4>Spotted Fever Rickettsiosis Dashboard</h4>
             </div>
             Spotted Fever Rickettsiosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Spotted-Fever" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>Cases per Million (2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Syphilis">
             <div class="section-header section" id="NND">
               <h4>Syphilis Dashboard</h4>
             </div>
             Syphilis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Syphilis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Trichinellosis">
             <div class="section-header section" id="NND">
               <h4>Trichinellosis Dashboard</h4>
             </div>
             Trichinellosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Trichinellosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2011 (Cases)</th>
+                        <th>2011 (Rate per 100K population)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2012 (Rate per 100K population)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2013 (Rate per 100K population)</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Tuberculosis">
             <div class="section-header section" id="NND">
               <h4>Tuberculosis Dashboard</h4>
             </div>
             Tuberculosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Tuberculosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Total Cases</th>
+                        <th>American Indian/Alaska Native</th>
+                        <th>Asian</th>
+                        <th>Black/African American</th>
+                        <th>Native Hawaiian/Other Pacific Islander</th>
+                        <th>White</th>
+                        <th>Multiple Race</th>
+                        <th>Hispanic/Latino</th>
+                        <th>Unknown</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Tularemia">
             <div class="section-header section" id="NND">
               <h4>Tularemia Dashboard</h4>
             </div>
             Tularemia Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Tularemia" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2008 (Cases)</th>
+                        <th>2009 (Cases)</th>
+                        <th>2010 (Cases)</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Vibrosis">
             <div class="section-header section" id="NND">
               <h4>Vibrosis Dashboard</h4>
             </div>
             Vibrosis Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Vibrosis" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Genus and Species of Vibrionaceae</th>
+                        <th>2010 (Cases)</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Zika Virus">
             <div class="section-header section" id="NND">
               <h4>Zika Virus Dashboard</h4>
             </div>
             Zika Virus Dashboard Placeholder
+
+            <div class="row">
+              <div class=col-12>
+                <div class="card dashboard">
+                 <table id="Zika-Virus" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2016 (Symptomatic Cases)</th>
+                        <th>2016 (Presumptive Viremic Blood Donors)</th>
+                        <th>2017 (Symptomatic Cases)</th>
+                        <th>2017 (Presumptive Viremic Blood Donors)</th>
+                        <th>2018 (Symptomatic Cases)</th>
+                        <th>2018 (Presumptive Viremic Blood Donors)</th>
+                        <th>2019 (Symptomatic Cases)</th>
+                        <th>2019 (Presumptive Viremic Blood Donors)</th>
+                        <th>2020 (Symptomatic Cases)</th>
+                        <th>2020 (Presumptive Viremic Blood Donors)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
   </div>
 
   <!-- Scripts for background -->

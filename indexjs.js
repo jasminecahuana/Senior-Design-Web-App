@@ -1,41 +1,3 @@
-//updateCovid is meant to check if the website is able to connect to the database and will display covid data straight from the database. In the HTML, you'll need to uncomment  <div class="connection"></div> located at the bottom of the file. this function will get modified/deleted eventually. 
-// updateCovid()
-// function updateCovid() {
-//   // $.ajax({
-//   //   url: "getCovid.php",
-//   //   success: function (result) {
-//   //     stateCOVIDData = result;
-//   //     $('.connection').html(result);
-//   //   }
-//   // });
-
-//   $(document).ready(function() {
-//     $('.display').DataTable( {
-//         ajax: {
-//           url: "getCovid.php",
-//           dataSrc: ''
-//         },
-//         columns:[
-//           {data: 'state'},
-//           {data: 'covid_19_deaths'}
-//         ]
-//     });
-// } );
-// }
-var table = $('.display').DataTable( {
-  destroy: true,
-  ajax: {
-    url: "getCovid.php",
-    data: {
-      dataset: "COVID-19",
-    },
-    dataSrc: ''
-  },
-  columns:[
-    {data: 'state'},
-    {data: 'covid_19_deaths'}
-  ]
-});
 const html = document.documentElement;
 const menu = document.getElementById('myMenuId');
 
@@ -53,21 +15,6 @@ $(document).ready(function () {
       dashboards.forEach(function (dashboard) {
         if (dashboard.dataset.diseaseDashboard === link.dataset.diseaseLink) {
           dashboard.style.display = 'block';
-          // table = $('.display').DataTable( {
-          //         destroy: true,
-          //         ajax: {
-          //           url: "getCovid.php",
-          //           data: {
-          //             dataset: dashboard.dataset.diseaseDashboard,
-          //           },
-          //           dataSrc: ''
-          //         },
-          //         columns:[
-          //           {data: 'state'},
-          //           {data: 'covid_19_deaths'},
-          //           {data: 'Cases per Million (2000-2018)'}
-          //         ]
-          // });
         } else {
           dashboard.style.display = 'none';
         }

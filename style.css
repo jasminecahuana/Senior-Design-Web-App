@@ -12,6 +12,10 @@ body {
   margin: 0;
 }
 
+/* default DataTable table has black font color so changing the dashboard card to be a lighter color for visibility  */
+.dashboard{
+  background-color: #787d82 !important;
+}
 /* Navigation menu before it's open  */
 .sidenav {
   height: 100%;
@@ -25,6 +29,7 @@ body {
   transition: 0.5s;
   padding-top: 60px;
 }
+
 
 /* Navigation menu after it's open */
 .sidenav a {
