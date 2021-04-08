@@ -16,7 +16,7 @@
         case "Anaplasmosis":
             $sql = "SELECT * FROM iidts_prod.disease_anaplasmosis_state_t limit 51;";
         default:
-            echo("Error")
+            echo("Error");
     }
     $result = mysqli_query($con, $sql);
 
