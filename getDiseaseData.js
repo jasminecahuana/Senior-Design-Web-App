@@ -455,34 +455,38 @@ $(document).ready(function() {
                     ]
                 }); 
                 break; 
-            case "Influenza A Virus":
-                console.log("Influenza A Virus: Unsure if data in database is accurate");
-                // table = $('#Invasive-Pneumococcal-Disease').DataTable( {
-                //     destroy: true,
-                //     ajax: {
-                //     url: "getSQLQueryStateAndOthers.php",
-                //     data:{
-                //         dataset: "Influenza A Virus",
-                //     },
-                //     dataSrc: ''
-                //     },
-                //     columns:[
-                //         {data: 'Race'},
-                //         {data: '2014 (Estimated Cases)'},
-                //         {data: '2015 (Estimated Cases)'},
-                //         {data: '2016 (Estimated Cases)'},
-                //         {data: '2017 (Estimated Cases)'},
-                //         {data: '2018 (Estimated Cases)'}
-                //     ]
-                // }); 
-                break; 
-            case "Invasive Pneumococcal Disease":
-                table = $('#Invasive-Pneumococcal-Disease').DataTable( {
+            case "Novel Influenza A Virus":
+                table = $('#Novel-Influenza-A-Virus').DataTable( {
                     destroy: true,
                     ajax: {
                     url: "getSQLQueryStateAndOthers.php",
                     data:{
-                        dataset: "Invasive Pneumococcal Disease",
+                        dataset: "Novel Influenza A Virus",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'State'},
+                        {data: '2011 (Cases)'},
+                        {data: '2012 (Cases)'},
+                        {data: '2013 (Cases)'},
+                        {data: '2014 (Cases)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2017 (Cases)'},
+                        {data: '2018 (Cases)'},
+                        {data: '2019 (Cases)'},
+                        {data: '2020 (Cases)'}
+                    ]
+                }); 
+                break; 
+            case "Pneumococcal Disease":
+                table = $('#Pneumococcal-Disease').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryStateAndOthers.php",
+                    data:{
+                        dataset: "Pneumococcal Disease",
                     },
                     dataSrc: ''
                     },
