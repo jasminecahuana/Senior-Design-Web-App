@@ -15,6 +15,7 @@ body {
 /* default DataTable table has black font color so changing the dashboard card to be a lighter color for visibility  */
 .dashboard{
   background-color: #787d82 !important;
+  overflow: auto;
 }
 /* Navigation menu before it's open  */
 .sidenav {

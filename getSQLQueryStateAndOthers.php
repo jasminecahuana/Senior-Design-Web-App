@@ -72,11 +72,10 @@
         case "HIV":
             $sql = "SELECT * FROM iidts_prod.disease_hiv_race_t limit 6;";
             break;
-        case "Influenza A Virus":
-            // Will need to edit with correct SQL query
-            $sql = "SELECT * FROM iidts_prod.disease_hiv_race_t limit 6;";
+        case "Novel Influenza A Virus":
+            $sql = "SELECT * FROM iidts_prod.disease_influenza_a_state_t limit 50;";
             break;
-        case "Invasive Pneumococcal Disease":
+        case "Pneumococcal Disease":
             $sql = "SELECT * FROM iidts_prod.disease_invasive_pneumococcal_age_t limit 10;";
             break;
         case "Legionellosis":
@@ -101,7 +100,7 @@
             $sql = "SELECT * FROM iidts_prod.disease_plague_year_t limit 19;";
             break;
         case "Q Fever":
-            $sql = "SELECT * FROM iidts_prod.disease_tularemia_age_gender_t limit 19;";
+            $sql = "SELECT * FROM iidts_prod.disease_qfever_age_t limit 15;";
             break;
         case "Rabies (Human)":
             // Will need to edit with correct SQL query

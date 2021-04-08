@@ -1,3 +1,4 @@
+// paused at line 426 on gonnorhea
 $(document).ready(function() {
     var links = document.querySelectorAll('[data-disease-link]');
     var dashboards = document.querySelectorAll('[data-disease-dashboard]');
@@ -17,6 +18,8 @@ $(document).ready(function() {
         {data: 'covid_19_deaths'}      
       ]
     });
+
+    var secondTable;
 
     // creating each table with its corresponding column names and dataset value
     links.forEach(function (link) {
@@ -51,6 +54,20 @@ $(document).ready(function() {
                         columns:[
                         {data: 'State'},
                         {data: 'Cases per Million (2000-2018)'}      
+                        ]
+                    }); 
+                    secondTable = $('#AnaplasmosisSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Anaplasmosis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                        {data: 'Year'},
+                        {data: 'Cases (2000 - 2018)'}      
                         ]
                     }); 
                     break;
@@ -113,6 +130,21 @@ $(document).ready(function() {
                             {data: 'Cases (2010)'}
                         ]
                     }); 
+                    secondTable = $('#BrucellosisSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Brucellosis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                        {data: 'Year'},
+                        {data: 'Cases'}      
+                        ]
+                    }); 
+                    break;
                     break;     
                 case "Campylobacteriosis":
                     table = $('#Campylobacteriosis').DataTable( {
@@ -190,6 +222,29 @@ $(document).ready(function() {
                             {data: '2018 (Rate per 100K population)'}
                         ]
                     }); 
+                    secondTable = $('#ChlamydiaSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Chlamydia",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Age'},
+                            {data: '2014 (Cases)'},
+                            {data: '2014 (Rate per 100K population)'},
+                            {data: '2015 (Cases)'},
+                            {data: '2015 (Rate per 100K population)'},
+                            {data: '2016 (Cases)'},
+                            {data: '2016 (Rate per 100K population)'},
+                            {data: '2017 (Cases)'},
+                            {data: '2017 (Rate per 100K population)'},
+                            {data: '2018 (Cases)'},
+                            {data: '2018 (Rate per 100K population)'}    
+                        ]
+                    }); 
                     break;  
                 case "Coccidioidomycosis":
                     table = $('#Coccidioidomycosis').DataTable( {
@@ -232,6 +287,46 @@ $(document).ready(function() {
                             {data: '2014 (Cases)'}
                         ]
                     }); 
+                    secondTable = $('#CongenitalSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Congenital Syphilis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Region of Birth of Infant'},
+                            {data: '2008 (Cases)'},
+                            {data: '2009 (Cases)'},
+                            {data: '2010 (Cases)'},
+                            {data: '2011 (Cases)'},
+                            {data: '2012 (Cases)'},
+                            {data: '2013 (Cases)'},
+                            {data: '2014 (Cases)'}
+                        ]
+                    }); 
+                    thirdTable = $('#CongenitalThird').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryAgeAgeGenderOthers.php",
+                        data:{
+                            dataset: "Congenital Syphilis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Vital Status of Infant'},
+                            {data: '2008 (Cases)'},
+                            {data: '2009 (Cases)'},
+                            {data: '2010 (Cases)'},
+                            {data: '2011 (Cases)'},
+                            {data: '2012 (Cases)'},
+                            {data: '2013 (Cases)'},
+                            {data: '2014 (Cases)'}
+                        ]
+                    }); 
                     break;  
                 case "Cryptosporidiosis":
                     table = $('#Cryptosporidiosis').DataTable( {
@@ -245,6 +340,35 @@ $(document).ready(function() {
                         },
                         columns:[
                             {data: 'State'},
+                            {data: 'Cases (2018)'},
+                            {data: 'Rate per 100K population (2018)'}
+                        ]
+                    }); 
+                    secondTable = $('#CryptosporidiosisSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Cryptosporidiosis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Race'},
+                            {data: 'Cases (2018)'}
+                        ]
+                    }); 
+                    thirdTable = $('#CryptosporidiosisThird').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryAgeAgeGenderOthers.php",
+                        data:{
+                            dataset: "Cryptosporidiosis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Age (Years)'},
                             {data: 'Cases (2018)'},
                             {data: 'Rate per 100K population (2018)'}
                         ]
@@ -288,6 +412,21 @@ $(document).ready(function() {
                             {data: 'Cases per Million (2000-2018)'}
                         ]
                     }); 
+                    case "Ehrlichiosis":
+                        secondTable = $('#EhrlichiosisSecond').DataTable( {
+                            destroy: true,
+                            ajax: {
+                            url: "getSQLQueryYearRaceOthers.php",
+                            data:{
+                                dataset: "Ehrlichiosis",
+                            },
+                            dataSrc: ''
+                            },
+                            columns:[
+                                {data: 'Year'},
+                                {data: 'Cases'}
+                            ]
+                        }); 
                     break; 
                 case "Giardiasis":
                     table = $('#Giardiasis').DataTable( {
@@ -306,6 +445,20 @@ $(document).ready(function() {
                             {data: 'Number of Outbreak-Associated Cases'}
                         ]
                     }); 
+                    secondTable = $('#GiardiasisSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Giardiasis",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Year'},
+                            {data: 'Cases'}
+                        ]
+                    }); 
                     break; 
                 case "Gonorrhea":
                     table = $('#Gonorrhea').DataTable( {
@@ -319,6 +472,58 @@ $(document).ready(function() {
                         },
                         columns:[
                             {data: 'State'},
+                            {data: '2014 (Cases)'},
+                            {data: '2015 (Cases)'},
+                            {data: '2016 (Cases)'},
+                            {data: '2017 (Cases)'},
+                            {data: '2018 (Cases)'}
+                        ]
+                    }); 
+                    secondTable = $('#GonorrheaSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "Gonorrhea",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Age (Years)'},
+                            {data: 'Total 2018 Cases (American Indian/Alaska Native)'},
+                            {data: 'Male 2018 Cases (American Indian/Alaska Native)'},
+                            {data: 'Female 2018 Cases (American Indian/Alaska Native)'},
+                            {data: 'Total 2018 Cases (Asians)'},
+                            {data: 'Male 2018 Cases (Asians)'},
+                            {data: 'Female 2018 Cases (Asians)'},
+                            {data: 'Total 2018 Cases (Blacks)'},
+                            {data: 'Male 2018 Cases (Blacks)'},
+                            {data: 'Female 2018 Cases (Blacks)'},
+                            {data: 'Total 2018 Cases (Native Hawaiians/Other Pacific Islanders)'},
+                            {data: 'Male 2018 Cases (Native Hawaiians/Other Pacific Islanders)'},
+                            {data: 'Female 2018 Cases (Native Hawaiians/Other Pacific Islanders)'},
+                            {data: 'Total 2018 Cases (Whites)'},
+                            {data: 'Male 2018 Cases (Whites)'},
+                            {data: 'Female 2018 Cases (Whites)'},
+                            {data: 'Total 2018 Cases (Multirace)'},
+                            {data: 'Male 2018 Cases (Multirace)'},
+                            {data: 'Female 2018 Cases (Multirace)'},
+                            {data: 'Total 2018 Cases (Hispanics)'},
+                            {data: 'Male 2018 Cases (Hispanics)'},
+                            {data: 'Female 2018 Cases (Hispanics)'}
+                        ]
+                    }); 
+                    thirdTable = $('#GonorrheaThird').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryAgeAgeGenderOthers.php",
+                        data:{
+                            dataset: "Gonorrhea",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Age'},
                             {data: '2014 (Cases)'},
                             {data: '2015 (Cases)'},
                             {data: '2016 (Cases)'},
@@ -384,6 +589,44 @@ $(document).ready(function() {
                         {data: '2018 (Rate per 100K population)'}
                     ]
                 }); 
+                secondTable = $('#Hepatitis-ASecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Hepatitis A",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Year'},
+                        {data: 'Cases'},
+                        {data: 'Rate per 100K population'}
+                    ]
+                }); 
+                table = $('#Hepatitis-AThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Hepatitis A",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age'},
+                        {data: '2014 (Cases)'},
+                        {data: '2014 (Rate per 100K population)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2015 (Rate per 100K population)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2016 (Rate per 100K population)'},
+                        {data: '2017 (Cases)'},
+                        {data: '2017 (Rate per 100K population)'},
+                        {data: '2018 (Cases)'},
+                        {data: '2018 (Rate per 100K population)'}
+                    ]
+                }); 
                 break; 
             case "Hepatitis B":
                 table = $('#Hepatitis-B').DataTable( {
@@ -397,6 +640,44 @@ $(document).ready(function() {
                     },
                     columns:[
                         {data: 'State'},
+                        {data: '2014 (Cases)'},
+                        {data: '2014 (Rate per 100K population)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2015 (Rate per 100K population)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2016 (Rate per 100K population)'},
+                        {data: '2017 (Cases)'},
+                        {data: '2017 (Rate per 100K population)'},
+                        {data: '2018 (Cases)'},
+                        {data: '2018 (Rate per 100K population)'}
+                    ]
+                }); 
+                secondTable = $('#Hepatitis-BSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Hepatitis B",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Year'},
+                        {data: 'Cases'},
+                        {data: 'Rate per 100K population'}
+                    ]
+                }); 
+                thirdTable = $('#Hepatitis-BThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Hepatitis B",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age'},
                         {data: '2014 (Cases)'},
                         {data: '2014 (Rate per 100K population)'},
                         {data: '2015 (Cases)'},
@@ -434,6 +715,44 @@ $(document).ready(function() {
                         {data: '2018 (Rate per 100K population)'}
                     ]
                 }); 
+                secondTable = $('#Hepatitis-CSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Hepatitis C",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Year'},
+                        {data: 'Cases'},
+                        {data: 'Rate per 100K population'}
+                    ]
+                }); 
+                thirdTable = $('#Hepatitis-CThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Hepatitis C",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age'},
+                        {data: '2014 (Cases)'},
+                        {data: '2014 (Rate per 100K population)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2015 (Rate per 100K population)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2016 (Rate per 100K population)'},
+                        {data: '2017 (Cases)'},
+                        {data: '2017 (Rate per 100K population)'},
+                        {data: '2018 (Cases)'},
+                        {data: '2018 (Rate per 100K population)'}
+                    ]
+                }); 
                 break; 
             case "HIV":
                 table = $('#HIV').DataTable( {
@@ -454,35 +773,57 @@ $(document).ready(function() {
                         {data: '2018 (Estimated Cases)'}
                     ]
                 }); 
+                secondTable = $('#HIVSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "HIV",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age (Years)'},
+                        {data: '2014 (Estimated Cases)'},
+                        {data: '2015 (Estimated Cases)'},
+                        {data: '2016 (Estimated Cases)'},
+                        {data: '2017 (Estimated Cases)'},
+                        {data: '2018 (Estimated Cases)'}
+                    ]
+                }); 
                 break; 
-            case "Influenza A Virus":
-                console.log("Influenza A Virus: Unsure if data in database is accurate");
-                // table = $('#Invasive-Pneumococcal-Disease').DataTable( {
-                //     destroy: true,
-                //     ajax: {
-                //     url: "getSQLQueryStateAndOthers.php",
-                //     data:{
-                //         dataset: "Influenza A Virus",
-                //     },
-                //     dataSrc: ''
-                //     },
-                //     columns:[
-                //         {data: 'Race'},
-                //         {data: '2014 (Estimated Cases)'},
-                //         {data: '2015 (Estimated Cases)'},
-                //         {data: '2016 (Estimated Cases)'},
-                //         {data: '2017 (Estimated Cases)'},
-                //         {data: '2018 (Estimated Cases)'}
-                //     ]
-                // }); 
+                case "Novel Influenza A Virus":
+                    table = $('#Novel-Influenza-A-Virus').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryStateAndOthers.php",
+                        data:{
+                            dataset: "Novel Influenza A Virus",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'State'},
+                            {data: '2011 (Cases)'},
+                            {data: '2012 (Cases)'},
+                            {data: '2013 (Cases)'},
+                            {data: '2014 (Cases)'},
+                            {data: '2015 (Cases)'},
+                            {data: '2016 (Cases)'},
+                            {data: '2017 (Cases)'},
+                            {data: '2018 (Cases)'},
+                            {data: '2019 (Cases)'},
+                            {data: '2020 (Cases)'}
+                        ]
+                    }); 
                 break; 
-            case "Invasive Pneumococcal Disease":
-                table = $('#Invasive-Pneumococcal-Disease').DataTable( {
+            case "Pneumococcal Disease":
+                table = $('#Pneumococcal-Disease').DataTable( {
                     destroy: true,
                     ajax: {
                     url: "getSQLQueryStateAndOthers.php",
                     data:{
-                        dataset: "Invasive Pneumococcal Disease",
+                        dataset: "Pneumococcal Disease",
                     },
                     dataSrc: ''
                     },
@@ -505,6 +846,40 @@ $(document).ready(function() {
                     },
                     columns:[
                         {data: 'State'},
+                        {data: '2014 (Cases)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2017 (Cases)'}
+                    ]
+                }); 
+                secondTable = $('#LegionellosisSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Legionellosis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Race'},
+                        {data: '2014 (Cases)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2017 (Cases)'}
+                    ]
+                }); 
+                thirdTable = $('#LegionellosisThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Legionellosis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age'},
                         {data: '2014 (Cases)'},
                         {data: '2015 (Cases)'},
                         {data: '2016 (Cases)'},
@@ -534,6 +909,37 @@ $(document).ready(function() {
                         {data: '2016 (Cases)'},
                         {data: '2017 (Cases)'},
                         {data: '2018 (Cases)'}
+                    ]
+                }); 
+                secondTable = $('#LymeSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Lyme Disease",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Year'},
+                        {data: 'Cases'},
+                        {data: 'Rate per 100K population'}
+                    ]
+                }); 
+                thirdTable = $('#LymeThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Lyme Disease",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age'},
+                        {data: 'Male Cases (2001-2018)'},
+                        {data: 'Female Cases (2001-2018)'},
+                        {data: 'Total Cases (2001-2018)'}
                     ]
                 }); 
                 break; 
@@ -649,10 +1055,8 @@ $(document).ready(function() {
                     dataSrc: ''
                     },
                     columns:[
-                        {data: 'Age (Years)'},
-                        {data: 'Total Cases (2001-2018)'},
-                        {data: 'Male Cases (2001-2018)'},
-                        {data: 'Female Cases (2001-2018)'}
+                        {data: 'Age'},
+                        {data: 'Cases per Million (2000-2017)'}
                     ]
                 }); 
                 break; 
@@ -690,6 +1094,34 @@ $(document).ready(function() {
                         {data: 'Cases per Million (2018)'}
                     ]
                 }); 
+                secondTable = $('#Spotted-FeverSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Spotted Fever",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Year'},
+                        {data: 'Cases'}
+                    ]
+                }); 
+                table = $('#Spotted-FeverThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Spotted Fever",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age (years)'},
+                        {data: 'Cases per Million (2000-2018)'}
+                    ]
+                }); 
                 break; 
             case "Syphilis":
                 table = $('#Syphilis').DataTable( {
@@ -703,6 +1135,63 @@ $(document).ready(function() {
                     },
                     columns:[
                         {data: 'State'},
+                        {data: '2014 (Cases)'},
+                        {data: '2014 (Rate per 100K population)'},
+                        {data: '2015 (Cases)'},
+                        {data: '2015 (Rate per 100K population)'},
+                        {data: '2016 (Cases)'},
+                        {data: '2016 (Rate per 100K population)'},
+                        {data: '2017 (Cases)'},
+                        {data: '2017 (Rate per 100K population)'},
+                        {data: '2018 (Cases)'},
+                        {data: '2018 (Rate per 100K population)'}
+                    ]
+                }); 
+                secondTable = $('#SyphilisSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Syphilis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age (Years)'},
+                        {data: 'Total 2018 Cases (American Indians/Alaska Natives)'},
+                        {data: 'Male 2018 Cases (American Indians/Alaska Natives)'},
+                        {data: 'Female 2018 Cases (American Indians/Alaska Natives)'},
+                        {data: 'Total 2018 Cases (Asians)'},
+                        {data: 'Male 2018 Cases (Asians)'},
+                        {data: 'Female 2018 Cases (Asians)'},
+                        {data: 'Total 2018 Cases (Blacks)'},
+                        {data: 'Male 2018 Cases (Blacks)'},
+                        {data: 'Female 2018 Cases (Blacks)'},
+                        {data: 'Total 2018 Cases (Native Hawaiians/Other Pacific Islanders)'},
+                        {data: 'Male 2018 Cases (Native Hawaiians/Other Pacific Islanders)'},
+                        {data: 'Female 2018 Cases (Native Hawaiians/Other Pacific Islanders)'},
+                        {data: 'Total 2018 Cases (Whites)'},
+                        {data: 'Male 2018 Cases (Whites)'},
+                        {data: 'Female 2018 Cases (Whites)'},
+                        {data: 'Total 2018 Cases (Multirace)'},
+                        {data: 'Male 2018 Cases (Multirace)'},
+                        {data: 'Female 2018 Cases (Multirace)'},
+                        {data: 'Total 2018 Cases (Hispanics)'},
+                        {data: 'Male 2018 Cases (Hispanics)'},
+                        {data: 'Female 2018 Cases (Hispanics)'}
+                    ]
+                }); 
+                thirdTable = $('#SyphilisThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Syphilis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age'},
                         {data: '2014 (Cases)'},
                         {data: '2014 (Rate per 100K population)'},
                         {data: '2015 (Cases)'},
@@ -740,6 +1229,20 @@ $(document).ready(function() {
                         {data: '2015 (Rate per 100K population)'}
                     ]
                 }); 
+                secondTable = $('#TrichinellosisSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Trichinellosis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age (Years)'},
+                        {data: 'Cases (2011-2015)'}
+                    ]
+                }); 
                 break; 
             case "Tuberculosis":
                 table = $('#Tuberculosis').DataTable( {
@@ -762,6 +1265,43 @@ $(document).ready(function() {
                         {data: 'Multiple Race'},
                         {data: 'Hispanic/Latino'},
                         {data: 'Unknown'}
+                    ]
+                }); 
+                secondTable = $('#TuberculosisSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Tuberculosis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Year'},
+                        {data: 'Total Cases'},
+                        {data: '0-4 Years (Age)'},
+                        {data: '5-14 Years (Age)'},
+                        {data: '15-24 Years (Age)'},
+                        {data: '25-44 Years (Age)'},
+                        {data: '45-64 Years (Age)'},
+                        {data: '65+ Years (Age)'},
+                        {data: 'Unknown (Age)'}
+                    ]
+                }); 
+                thirdTable = $('#TuberculosisThird').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryAgeAgeGenderOthers.php",
+                    data:{
+                        dataset: "Tuberculosis",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age (Years)'},
+                        {data: 'Total Cases (2019)'},
+                        {data: 'Male Cases (2019)'},
+                        {data: 'Female Cases (2019)'}
                     ]
                 }); 
                 break; 
@@ -788,6 +1328,22 @@ $(document).ready(function() {
                         {data: '2016 (Cases)'},
                         {data: '2017 (Cases)'},
                         {data: '2018 (Cases)'}
+                    ]
+                }); 
+                secondTable = $('#TularemiaSecond').DataTable( {
+                    destroy: true,
+                    ajax: {
+                    url: "getSQLQueryYearRaceOthers.php",
+                    data:{
+                        dataset: "Tularemia",
+                    },
+                    dataSrc: ''
+                    },
+                    columns:[
+                        {data: 'Age (Years)'},
+                        {data: 'Total Cases (2001-2018)'},
+                        {data: 'Male Cases (2001-2018)'},
+                        {data: 'Female Cases (2001-2018)'}
                     ]
                 }); 
                 break; 

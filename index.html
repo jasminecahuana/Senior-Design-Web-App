@@ -275,12 +275,8 @@
           <a data-disease-link="HIV"><button class="btn btn-link" type="button" data-disease-link="HIV">HIV</button></a>
         </li>
         <li>
-          <a data-disease-link="Influenza A Virus"><button class="btn btn-link" type="button"
-              data-disease-link="Influenza A Virus">Influenza A Virus</button></a>
-        </li>
-        <li>
-          <a data-disease-link="Invasive Pneumococcal Disease"><button class="btn btn-link" type="button"
-              data-disease-link="Invasive Pneumococcal Disease">Invasive Pneumococcal Disease</button></a>
+          <a data-disease-link="Novel Influenza A Virus"><button class="btn btn-link" type="button"
+            data-disease-link="Novel Influenza A Virus">Novel Influenza A Virus</button></a>
         </li>
         <li>
           <a data-disease-link="Legionellosis"><button class="btn btn-link" type="button"
@@ -310,7 +306,6 @@
           <a data-disease-link="Plague"><button class="btn btn-link" type="button"
               data-disease-link="Plague">Plague</button></a>
         </li>
-        <!-- !!!!! is this different from Invasive Pneumoccal Disease? -->
         <li>
           <a data-disease-link="Pneumococcal Disease"><button class="btn btn-link" type="button"
               data-disease-link="Pneumococcal Disease">Pneumococcal Disease</button></a>
@@ -368,7 +363,7 @@
             COVID-19 Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="covid" class="cell-border" style="width:100%">
                     <thead>
@@ -384,8 +379,8 @@
 
 
             <!--Cards for Twitter timeline and Word Cloud-->
-            <div class="row">
-              <div class="col-6">
+            <div class="row justify-content-md-center">
+              <div class="col-4">
                 <div class="card" id="twitter-stream">
                   <a class="twitter-timeline" data-lang="en" data-height="100%" data-theme="dark"
                     href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw">Tweets by CDCgov</a>
@@ -393,7 +388,7 @@
                 </div>
               </div>
 
-              <div class="col-6">
+              <div class="col-4">
                 <div class="card WordCloud">
                   <div class="card-header-WordCloud">
                     <h4>Word Cloud</h4>
@@ -415,13 +410,28 @@
             Anaplasmosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Anaplasmosis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases per Million (2000-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="AnaplasmosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases (2000 - 2018)</th>
                       </tr>
                     </thead>
                   </table>
@@ -438,7 +448,7 @@
             Babesiosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Babesiosis" class="cell-border" style="width:100%">
                     <thead>
@@ -467,7 +477,7 @@
             Botulism Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Botulism" class="cell-border" style="width:100%">
                     <thead>
@@ -494,13 +504,29 @@
             Brucellosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Brucellosis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases (2010)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="BrucellosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
                       </tr>
                     </thead>
                   </table>
@@ -516,7 +542,7 @@
             Campylobacteriosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Campylobacteriosis" class="cell-border" style="width:100%">
                     <thead>
@@ -538,7 +564,7 @@
             Candida Auris Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Candida" class="cell-border" style="width:100%">
                     <thead>
@@ -560,7 +586,7 @@
             Chancroid Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Chancroid" class="cell-border" style="width:100%">
                     <thead>
@@ -586,7 +612,7 @@
             Chlamydia Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Chlamydia" class="cell-border" style="width:100%">
                     <thead>
@@ -609,6 +635,30 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                  <table id="ChlamydiaSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population))</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+    
           </div>
           <div style="display: none;" data-disease-dashboard="Coccidioidomycosis">
             <div class="section-header section" id="NND">
@@ -617,7 +667,7 @@
             Coccidioidomycosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Coccidioidomycosis" class="cell-border" style="width:100%">
                     <thead>
@@ -643,12 +693,54 @@
             Congenital Syphilis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Congenital" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>Race/Ethnicity of Mother</th>
+                        <th>2008 (Cases)</th>
+                        <th>2009 (Cases)</th>
+                        <th>2010 (Cases)</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="CongenitalSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Region of Birth of Infant</th>
+                        <th>2008 (Cases)</th>
+                        <th>2009 (Cases)</th>
+                        <th>2010 (Cases)</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="CongenitalThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Vital Status of Infant</th>
                         <th>2008 (Cases)</th>
                         <th>2009 (Cases)</th>
                         <th>2010 (Cases)</th>
@@ -671,12 +763,43 @@
             Cryptosporidiosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Cryptosporidiosis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
+                        <th>Cases (2018)</th>
+                        <th>Rate per 100K population (2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="CryptosporidiosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Race</th>
+                        <th>Cases (2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="CryptosporidiosisThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
                         <th>Cases (2018)</th>
                         <th>Rate per 100K population (2018)</th>
                       </tr>
@@ -694,7 +817,7 @@
             Dengue Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Dengue" class="cell-border" style="width:100%">
                     <thead>
@@ -723,13 +846,28 @@
             Ehrlichiosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Ehrlichiosis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases per Million (2000-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="EhrlichiosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
                       </tr>
                     </thead>
                   </table>
@@ -745,7 +883,7 @@
             Giardiasis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Giardiasis" class="cell-border" style="width:100%">
                     <thead>
@@ -761,6 +899,21 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="GiardiasisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Gonorrhea">
             <div class="section-header section" id="NND">
@@ -769,12 +922,66 @@
             Gonorrhea Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Gonorrhea" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="GonorrheaSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Total 2018 Cases (American Indian/Alaska Native)</th>
+                        <th>Male 2018 Cases (American Indian/Alaska Native)</th>
+                        <th>Female 2018 Cases (American Indian/Alaska Native)</th>
+                        <th>Total 2018 Cases (Asians)</th>
+                        <th>Male 2018 Cases (Asians)</th>
+                        <th>Female 2018 Cases (Asians)</th>
+                        <th>Total 2018 Cases (Blacks)</th>
+                        <th>Male 2018 Cases (Blacks)</th>
+                        <th>Female 2018 Cases (Blacks)</th>
+                        <th>Total 2018 Cases (Native Hawaiians/Other Pacific Islanders)</th>
+                        <th>Male 2018 Cases (Native Hawaiians/Other Pacific Islanders)</th>
+                        <th>Female 2018 Cases (Native Hawaiians/Other Pacific Islanders)</th>
+                        <th>Total 2018 Cases (Whites)</th>
+                        <th>Male 2018 Cases (Whites)</th>
+                        <th>Female 2018 Cases (Whites)</th>
+                        <th>Total 2018 Cases (Multirace)</th>
+                        <th>Male 2018 Cases (Multirace)</th>
+                        <th>Female 2018 Cases (Multirace)</th>
+                        <th>Total 2018 Cases (Hispanics)</th>
+                        <th>Male 2018 Cases (Hispanics)</th>
+                        <th>Female 2018 Cases (Hispanics)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="GonorrheaThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
                         <th>2014 (Cases)</th>
                         <th>2015 (Cases)</th>
                         <th>2016 (Cases)</th>
@@ -795,7 +1002,7 @@
             Haemophilus Influenzae Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Haemophilus" class="cell-border" style="width:100%">
                     <thead>
@@ -818,7 +1025,7 @@
             Hantavirus Infection Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hantavirus" class="cell-border" style="width:100%">
                     <thead>
@@ -840,14 +1047,55 @@
             Hepatitis A Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-A" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>2014 (Cases)</th>
-                        <th>2014 (Rate per 100K population))</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Hepatitis-ASecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                        <th>Rate per 100K population</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Hepatitis-AThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
                         <th>2015 (Cases)</th>
                         <th>2015 (Rate per 100K population)</th>
                         <th>2016 (Cases)</th>
@@ -871,14 +1119,55 @@
             Hepatitis B Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-B" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>2014 (Cases)</th>
-                        <th>2014 (Rate per 100K population))</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Hepatitis-BSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                        <th>Rate per 100K population</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Hepatitis-BThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
                         <th>2015 (Cases)</th>
                         <th>2015 (Rate per 100K population)</th>
                         <th>2016 (Cases)</th>
@@ -902,12 +1191,52 @@
             Hepatitis C Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-C" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>Race/Ethnicity</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Hepatitis-CSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                        <th>Rate per 100K population</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Hepatitis-CThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
                         <th>2014 (Cases)</th>
                         <th>2014 (Rate per 100K population)</th>
                         <th>2015 (Cases)</th>
@@ -933,7 +1262,7 @@
             HIV Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="HIV" class="cell-border" style="width:100%">
                     <thead>
@@ -951,21 +1280,18 @@
               </div>
             </div>
 
-          </div>
-          <div style="display: none;" data-disease-dashboard="Influenza A Virus">
-            <div class="section-header section" id="NND">
-              <h4>Influenza A Virus Dashboard</h4>
-            </div>
-            Influenza A Virus Dashboard Placeholder
-
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
-                 <table id="Influenza-A-Virus" class="cell-border" style="width:100%">
+                 <table id="HIVSecond" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
-                        <th>State</th>
-                        <th>Cases per Million (2000-2018)</th>
+                        <th>Age (Years)</th>
+                        <th>2014 (Estimated Cases)</th>
+                        <th>2015 (Estimated Cases)</th>
+                        <th>2016 (Estimated Cases)</th>
+                        <th>2017 (Estimated Cases)</th>
+                        <th>2018 (Estimated Cases)</th>
                       </tr>
                     </thead>
                   </table>
@@ -974,16 +1300,47 @@
             </div>
 
           </div>
-          <div style="display: none;" data-disease-dashboard="Invasive Pneumococcal Disease">
+          <div style="display: none;" data-disease-dashboard="Novel Influenza A Virus">
             <div class="section-header section" id="NND">
-              <h4>Invasive Pneumococcal Disease Dashboard</h4>
+              <h4>Novel Influenza A Virus Dashboard</h4>
             </div>
-            Invasive Pneumococcal Disease Dashboard Placeholder
+            Novel Influenza A Virus Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
-                 <table id="Invasive-Pneumococcal-Disease" class="cell-border" style="width:100%">
+                 <table id="Novel-Influenza-A-Virus" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>State</th>
+                        <th>2011 (Cases)</th>
+                        <th>2012 (Cases)</th>
+                        <th>2013 (Cases)</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2019 (Cases)</th>
+                        <th>2020 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div style="display: none;" data-disease-dashboard="Pneumococcal Disease">
+            <div class="section-header section" id="NND">
+              <h4>Pneumococcal Disease Dashboard</h4>
+            </div>
+            Pneumococcal Disease Dashboard Placeholder
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Pneumococcal-Disease" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1004,12 +1361,48 @@
             Legionellosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Legionellosis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="LegionellosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Race</th>
+                        <th>2014 (Cases)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2017 (Cases)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="LegionellosisThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
                         <th>2014 (Cases)</th>
                         <th>2015 (Cases)</th>
                         <th>2016 (Cases)</th>
@@ -1029,7 +1422,7 @@
             Lyme Disease Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Lyme" class="cell-border" style="width:100%">
                     <thead>
@@ -1052,6 +1445,39 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="LymeSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                        <th>Rate per 100K population</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="LymeThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
+                        <th>Male Cases (2001-2018)</th>
+                        <th>Female Cases (2001-2018)</th>
+                        <th>Total Cases (2001-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Measles">
             <div class="section-header section" id="NND">
@@ -1060,7 +1486,7 @@
             Measles Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Measles" class="cell-border" style="width:100%">
                     <thead>
@@ -1082,7 +1508,7 @@
             Meningococcal Disease Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Meningococcal-Disease" class="cell-border" style="width:100%">
                     <thead>
@@ -1107,7 +1533,7 @@
             Mumps Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Mumps" class="cell-border" style="width:100%">
                     <thead>
@@ -1130,7 +1556,7 @@
             Novel Influenza A Virus Infections Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Babesiosis" class="cell-border" style="width:100%">
                     <thead>
@@ -1152,7 +1578,7 @@
             Pertussis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Pertussis" class="cell-border" style="width:100%">
                     <thead>
@@ -1175,7 +1601,7 @@
             Plague Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Plague" class="cell-border" style="width:100%">
                     <thead>
@@ -1198,15 +1624,13 @@
             Q Fever Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Q-Fever" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
-                        <th>Age (Years)</th>
-                        <th>Total Cases (2001-2018)</th>
-                        <th>Male Cases (2001-2018)</th>
-                        <th>Female Cases (2001-2018)</th>
+                        <th>Age</th>
+                        <th>Cases per Million (2000-2017)</th>
                       </tr>
                     </thead>
                   </table>
@@ -1222,7 +1646,7 @@
             Rabies (Human) Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Rabies-(Human)" class="cell-border" style="width:100%">
                     <thead>
@@ -1244,13 +1668,43 @@
             Spotted Fever Rickettsiosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Spotted-Fever" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases per Million (2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Spotted-FeverSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Cases</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="Spotted-FeverThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (years)</th>
+                        <th>Cases per Million (2000-2018)</th>
                       </tr>
                     </thead>
                   </table>
@@ -1266,12 +1720,71 @@
             Syphilis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Syphilis" class="cell-border" style="width:100%">
                     <thead>
                       <tr>
                         <th>State</th>
+                        <th>2014 (Cases)</th>
+                        <th>2014 (Rate per 100K population)</th>
+                        <th>2015 (Cases)</th>
+                        <th>2015 (Rate per 100K population)</th>
+                        <th>2016 (Cases)</th>
+                        <th>2016 (Rate per 100K population)</th>
+                        <th>2017 (Cases)</th>
+                        <th>2017 (Rate per 100K population)</th>
+                        <th>2018 (Cases)</th>
+                        <th>2018 (Rate per 100K population)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="SyphilisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Total 2018 Cases (American Indian/Alaska Native)</th>
+                        <th>Male 2018 Cases (American Indian/Alaska Native)</th>
+                        <th>Female 2018 Cases (American Indian/Alaska Native)</th>
+                        <th>Total 2018 Cases (Asians)</th>
+                        <th>Male 2018 Cases (Asians)</th>
+                        <th>Female 2018 Cases (Asians)</th>
+                        <th>Total 2018 Cases (Blacks)</th>
+                        <th>Male 2018 Cases (Blacks)</th>
+                        <th>Female 2018 Cases (Blacks)</th>
+                        <th>Total 2018 Cases (Native Hawaiians/Other Pacific Islanders)</th>
+                        <th>Male 2018 Cases (Native Hawaiians/Other Pacific Islanders)</th>
+                        <th>Female 2018 Cases (Native Hawaiians/Other Pacific Islanders)</th>
+                        <th>Total 2018 Cases (Whites)</th>
+                        <th>Male 2018 Cases (Whites)</th>
+                        <th>Female 2018 Cases (Whites)</th>
+                        <th>Total 2018 Cases (Multirace)</th>
+                        <th>Male 2018 Cases (Multirace)</th>
+                        <th>Female 2018 Cases (Multirace)</th>
+                        <th>Total 2018 Cases (Hispanics)</th>
+                        <th>Male 2018 Cases (Hispanics)</th>
+                        <th>Female 2018 Cases (Hispanics)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="SyphilisThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age</th>
                         <th>2014 (Cases)</th>
                         <th>2014 (Rate per 100K population)</th>
                         <th>2015 (Cases)</th>
@@ -1297,7 +1810,7 @@
             Trichinellosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Trichinellosis" class="cell-border" style="width:100%">
                     <thead>
@@ -1320,6 +1833,21 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="TrichinellosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Cases (2011-2015)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Tuberculosis">
             <div class="section-header section" id="NND">
@@ -1328,7 +1856,7 @@
             Tuberculosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Tuberculosis" class="cell-border" style="width:100%">
                     <thead>
@@ -1350,6 +1878,45 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="TuberculosisSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Total Cases</th>
+                        <th>0-4 Years (Age)</th>
+                        <th>5-14 Years (Age)</th>
+                        <th>15-24 Years (Age)</th>
+                        <th>25-44 Years (Age)</th>
+                        <th>45-64 Years (Age)</th>
+                        <th>65+ Years (Age)</th>
+                        <th>Unknown (Age)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="TuberculosisThird" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Total Cases (2019)</th>
+                        <th>Male Cases (2019)</th>
+                        <th>Female Cases (2019)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Tularemia">
             <div class="section-header section" id="NND">
@@ -1358,7 +1925,7 @@
             Tularemia Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Tularemia" class="cell-border" style="width:100%">
                     <thead>
@@ -1382,6 +1949,23 @@
               </div>
             </div>
 
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="TularemiaSecond" class="cell-border" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>Age (Years)</th>
+                        <th>Total Cases (2001-2018)</th>
+                        <th>Male Cases (2001-2018)</th>
+                        <th>Female Cases (2001-2018)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
           </div>
           <div style="display: none;" data-disease-dashboard="Vibrosis">
             <div class="section-header section" id="NND">
@@ -1390,7 +1974,7 @@
             Vibrosis Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Vibrosis" class="cell-border" style="width:100%">
                     <thead>
@@ -1416,7 +2000,7 @@
             Zika Virus Dashboard Placeholder
 
             <div class="row">
-              <div class=col-12>
+              <div class="col-12">
                 <div class="card dashboard">
                  <table id="Zika-Virus" class="cell-border" style="width:100%">
                     <thead>
