@@ -1,4 +1,3 @@
-// paused at line 426 on gonnorhea
 $(document).ready(function() {
     var links = document.querySelectorAll('[data-disease-link]');
     var dashboards = document.querySelectorAll('[data-disease-dashboard]');
@@ -15,11 +14,35 @@ $(document).ready(function() {
       },
       columns:[
         {data: 'state'},
-        {data: 'covid_19_deaths'}      
+        {data: 'covid_19_deaths'},
+        {data: 'total_deaths'},
+        {data: 'pneumonia_deaths'},
+        {data: 'pneumonia_and_covid_19_deaths'},
+        {data: 'influenza_deaths'},
+        {data: 'pneumonia_influenza_or_covid'} 
       ]
     });
 
-    var secondTable;
+    var secondTable = $('#covidSecond').DataTable( {
+        destroy: true,
+        ajax: {
+        url: "getSQLQueryYearRaceOthers.php",
+        data:{
+            dataset: "COVID-19",
+        },
+        dataSrc: ''
+        },
+        columns:[
+            {data: 'sex'},
+            {data: 'age_group'},
+            {data: 'covid_19_deaths'},
+            {data: 'total_deaths'},
+            {data: 'pneumonia_deaths'},
+            {data: 'pneumonia_and_covid_19_deaths'},
+            {data: 'influenza_deaths'},
+            {data: 'pneumonia_influenza_or_covid'}    
+        ]
+    });
 
     // creating each table with its corresponding column names and dataset value
     links.forEach(function (link) {
@@ -36,8 +59,33 @@ $(document).ready(function() {
                         dataSrc: ''
                         },
                         columns:[
-                        {data: 'state'},
-                        {data: 'covid_19_deaths'}      
+                            {data: 'state'},
+                            {data: 'covid_19_deaths'},
+                            {data: 'total_deaths'},
+                            {data: 'pneumonia_deaths'},
+                            {data: 'pneumonia_and_covid_19_deaths'},
+                            {data: 'influenza_deaths'},
+                            {data: 'pneumonia_influenza_or_covid'}    
+                        ]
+                    });
+                    secondTable = $('#covidSecond').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQueryYearRaceOthers.php",
+                        data:{
+                            dataset: "COVID-19",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'sex'},
+                            {data: 'age_group'},
+                            {data: 'covid_19_deaths'},
+                            {data: 'total_deaths'},
+                            {data: 'pneumonia_deaths'},
+                            {data: 'pneumonia_and_covid_19_deaths'},
+                            {data: 'influenza_deaths'},
+                            {data: 'pneumonia_influenza_or_covid'}    
                         ]
                     });
                     break;

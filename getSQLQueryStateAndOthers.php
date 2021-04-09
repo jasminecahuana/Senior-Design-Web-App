@@ -7,7 +7,7 @@
     // Some of the data from specific diseases were omitted as it didn't fit on the table 
     switch($q){
         case "COVID-19":
-            $sql = "SELECT state, covid_19_deaths FROM iidts_prod.disease_covid19_cdc_api_t where age_group='All Ages' and sex='All Sexes' and data_as_of='2021-03-10' LIMIT 54;";
+            $sql = "SELECT state, covid_19_deaths, total_deaths, pneumonia_deaths, pneumonia_and_covid_19_deaths, influenza_deaths, pneumonia_influenza_or_covid FROM iidts_prod.disease_covid19_cdc_api_t where age_group='All Ages' and sex='All Sexes' and data_as_of='2021-03-10' LIMIT 54;;";
             break;
         case "Anaplasmosis":
             $sql = "SELECT State, `Cases per Million (2000-2018)` FROM iidts_prod.disease_anaplasmosis_state_t limit 51;";

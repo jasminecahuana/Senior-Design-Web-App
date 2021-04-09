@@ -6,6 +6,9 @@
     // Most of these SQL statements are state data, however, if there wasnt state data then resorted to race.ethincity data OR if the disease only had 1 feature then it should be in this file already
     // Some of the data from specific diseases were omitted as it didn't fit on the table 
     switch($q){
+        case "COVID-19":
+            $sql = "SELECT sex, age_group, covid_19_deaths, total_deaths, pneumonia_deaths, pneumonia_and_covid_19_deaths, influenza_deaths, pneumonia_influenza_or_covid FROM iidts_prod.disease_covid19_cdc_api_t where state='United States' and data_as_of='2021-03-10' limit 51;";
+            break;
         case "Anaplasmosis":
             $sql = "SELECT * FROM iidts_prod.disease_anaplasmosis_year_t limit 19;";
             break;

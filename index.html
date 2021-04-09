@@ -63,7 +63,7 @@
           <div class="row">
             <div class="col">
               <div class="card" data-toggle="modal" data-target="#topCardOne">
-                <h4>Most Contagious</h4>
+                <h5>Most Contagious</h5>
                 <p>Measles - R<sub>0</sub> of 12-18</p>
               </div>
               <!-- Modal -->
@@ -97,7 +97,7 @@
 
             <div class="col">
               <div class="card" data-toggle="modal" data-target="#topCardTwo">
-                <h4>Most Deadly</h4>
+                <h5>Most Deadly</h5>
                 <p>COVID-19</p>
               </div>
               <!-- Modal -->
@@ -123,7 +123,7 @@
 
             <div class="col">
               <div class="card" data-toggle="modal" data-target="#topCardThree">
-                <h4>Most Common</h4>
+                <h5>Most Common</h5>
                 <p>COVID-19</p>
               </div>
               <!-- Modal -->
@@ -149,7 +149,7 @@
 
             <div class="col">
               <div class="card" data-toggle="modal" data-target="#topCardFour">
-                <h4>Most Rare</h4>
+                <h5>Most Rare</h5>
                 <p>Zika Virus</p>
               </div>
               <!-- Modal -->
@@ -385,10 +385,38 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="covid" class="cell-border" style="width:100%">
+                  <caption>State, Deaths related to COVID-19/Pneumonia/Influenza in the United States</caption>
                     <thead>
                       <tr>
                         <th>State</th>
-                        <th>Deaths</th>
+                        <th>COVID-19 Deaths</th>
+                        <th>Total Deaths</th>
+                        <th>Pneumonia Deaths</th>
+                        <th>Pneumonia & COVID-19 Deaths</th>
+                        <th>Influenza Deaths</th>
+                        <th>Pneumonia,Influenza, Or COVID-19 Deaths</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <div class="card dashboard">
+                 <table id="covidSecond" class="cell-border" style="width:100%">
+                  <caption>Sex, Age, Deaths related to COVID-19/Pneumonia/Influenza in the United States</caption>
+                    <thead>
+                      <tr>
+                        <th>Sex</th>
+                        <th>Age Group</th>
+                        <th>COVID-19 Deaths</th>
+                        <th>Total Deaths</th>
+                        <th>Pneumonia Deaths</th>
+                        <th>Pneumonia & COVID-19 Deaths</th>
+                        <th>Influenza Deaths</th>
+                        <th>Pneumonia,Influenza, Or COVID-19 Deaths</th>
                       </tr>
                     </thead>
                   </table>
@@ -408,9 +436,21 @@
               </div>
 
               <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Twitter</h5>
+                    <h5 class="card-subtitle mb-2 text-muted">Tweets by CDC</h5>
+                    <p class="card-text mb-2">The Twitter stream to the left provides a real-time stream of tweets from the CDC. All of the data collected and presented in this project have originated from available COVID-19 and Nationally Notifiable Diseases data the CDC provides.</p>
+                    <h5 class="card-subtitle mb-2 text-muted">Word Cloud</h5>
+                    <p class="card-text mb-2">The image provided on the right represents the Twitter Natural Language Processing portion of this project. The word cloud is created by collecting tweets using Twitter libraries, tokenization, removing stop words, lemmatization, and word frequency. Using Python, it is possible to create a word cloud of frequent words/phrases from tweets containing keywords related to COVID-19</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-4">
                 <div class="card WordCloud">
                   <div class="card-header-WordCloud">
-                    <h4>Word Cloud</h4>
+                    <h5>Word Cloud</h5>
                   </div>
                   <div class="card-body">
                     <div class="text-center">
@@ -420,7 +460,9 @@
                 </div>
               </div>
             </div>
+
           </div>
+
           <!-- Diseases besides Covid  -->
           <div style="display: none;" data-disease-dashboard="Anaplasmosis">
             <div class="section-header section" id="NND">
@@ -432,6 +474,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Anaplasmosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -447,6 +490,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="AnaplasmosisSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States from 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -470,6 +514,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Babesiosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2011-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -499,6 +544,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Botulism" class="cell-border" style="width:100%">
+                  <caption>Transmission Types, Age, Cases in the United States in 2017</caption>
                     <thead>
                       <tr>
                         <th>Transmission Category</th>
@@ -526,6 +572,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Brucellosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States in 2010</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -542,6 +589,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="BrucellosisSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States in 2010</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -564,6 +612,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Campylobacteriosis" class="cell-border" style="width:100%">
+                  <caption>Outbreaks from Food Category in the United States from 2010-2017</caption>
                     <thead>
                       <tr>
                         <th>Food Category</th>
@@ -586,6 +635,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Candida" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States as of 2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -608,6 +658,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Chancroid" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -634,6 +685,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Chlamydia" class="cell-border" style="width:100%">
+                  <caption>State, Cases, Rates in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -658,6 +710,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="ChlamydiaSecond" class="cell-border" style="width:100%">
+                    <caption>Age, Cases, Rates in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -689,6 +742,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Coccidioidomycosis" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in Specific States in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -715,6 +769,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Congenital" class="cell-border" style="width:100%">
+                  <caption>Race/Ethinicity of Mother, Cases in the United States from 2008-2012. This disease spread to the infant from the pregnant mother.</caption>
                     <thead>
                       <tr>
                         <th>Race/Ethnicity of Mother</th>
@@ -736,6 +791,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="CongenitalSecond" class="cell-border" style="width:100%">
+                  <caption>Region of Birth, Cases in the United States from 2008-2014</caption>
                     <thead>
                       <tr>
                         <th>Region of Birth of Infant</th>
@@ -757,6 +813,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="CongenitalThird" class="cell-border" style="width:100%">
+                  <caption>Vitals of Infant, Cases in the United States from 2008-2014</caption>
                     <thead>
                       <tr>
                         <th>Vital Status of Infant</th>
@@ -785,6 +842,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Cryptosporidiosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases, Rates in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -801,6 +859,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="CryptosporidiosisSecond" class="cell-border" style="width:100%">
+                  <caption>Race, Cases in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -816,6 +875,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="CryptosporidiosisThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases, Rate in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -839,6 +899,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Dengue" class="cell-border" style="width:100%">
+                  <caption>State, Travel-Associated Cases in the United States from 2017-2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -868,6 +929,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Ehrlichiosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -883,6 +945,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="EhrlichiosisSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -905,6 +968,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Giardiasis" class="cell-border" style="width:100%">
+                  <caption>State, Cases, Rate, Outbreak-Associated Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -922,6 +986,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="GiardiasisSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -944,6 +1009,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Gonorrhea" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -963,6 +1029,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="GonorrheaSecond" class="cell-border" style="width:100%">
+                  <caption>Age, Cases for Female, Male, Both related to Race/Ethincity in the United States</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -998,6 +1065,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="GonorrheaThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1024,6 +1092,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Haemophilus" class="cell-border" style="width:100%">
+                  <caption>Race, Cases, Rates in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -1047,6 +1116,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hantavirus" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 1993-2017</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1069,6 +1139,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-A" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1093,6 +1164,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-ASecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases, Rates in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1110,6 +1182,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-AThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1141,6 +1214,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-B" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1166,6 +1240,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-BSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases, Rates in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1182,6 +1257,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-BThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1213,6 +1289,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-C" class="cell-border" style="width:100%">
+                  <caption>Race/Ethinicity, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Race/Ethnicity</th>
@@ -1237,6 +1314,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-CSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1253,6 +1331,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Hepatitis-CThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1284,6 +1363,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="HIV" class="cell-border" style="width:100%">
+                  <caption>Race, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -1303,6 +1383,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="HIVSecond" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1329,6 +1410,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Novel-Influenza-A-Virus" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2011-2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1360,6 +1442,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Pneumococcal-Disease" class="cell-border" style="width:100%">
+                  <caption>Age, Cases, Rates in the United States in 2016</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1383,6 +1466,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Legionellosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1401,6 +1485,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="LegionellosisSecond" class="cell-border" style="width:100%">
+                  <caption>Race, Cases in the United States from 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -1419,6 +1504,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="LegionellosisThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1444,6 +1530,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Lyme" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2009-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1468,6 +1555,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="LymeSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases, Rates in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1484,6 +1572,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="LymeThird" class="cell-border" style="width:100%">
+                  <caption>Age, Gender in the United States from 2001-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1508,6 +1597,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Measles" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1530,6 +1620,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Meningococcal-Disease" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2015-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1555,33 +1646,11 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Mumps" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div style="display: none;" data-disease-dashboard="Novel Influenza A Virus Infections">
-            <!-- !!!!!!!! Is this supposed to be here? -->
-            <div class="section-header section" id="NND">
-              <h4>Novel Influenza A Virus Infections Dashboard</h4>
-            </div>
-            Novel Influenza A Virus Infections Dashboard Placeholder
-
-            <div class="row">
-              <div class="col-12">
-                <div class="card dashboard">
-                 <table id="Babesiosis" class="cell-border" style="width:100%">
-                    <thead>
-                      <tr>
-                        <th>State</th>
-                        <th>Cases per Million (2000-2018)</th>
                       </tr>
                     </thead>
                   </table>
@@ -1600,6 +1669,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Pertussis" class="cell-border" style="width:100%">
+                  <caption>State, Cases, Rates in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1623,6 +1693,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Plague" class="cell-border" style="width:100%">
+                  <caption>Year, Cases, Deaths in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1646,6 +1717,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Q-Fever" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2000-2017</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1663,11 +1735,12 @@
               <h4>Rabies (Human) Dashboard</h4>
             </div>
             Rabies (Human) Dashboard Placeholder
-
+<!-- !!!!Make table or tableau data? -->
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Rabies-(Human)" class="cell-border" style="width:100%">
+                  <caption>Need To Fill</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1690,6 +1763,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Spotted-Fever" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1705,6 +1779,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Spotted-FeverSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1720,6 +1795,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Spotted-FeverThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Age (years)</th>
@@ -1742,6 +1818,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Syphilis" class="cell-border" style="width:100%">
+                  <caption>State, Cases, Rates in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1766,6 +1843,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="SyphilisSecond" class="cell-border" style="width:100%">
+                  <caption>Age, Cases for Female, Male, Both related to Race/Ethincity in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1801,6 +1879,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="SyphilisThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases, Rates in the United States from 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1832,6 +1911,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Trichinellosis" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2011-2015</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1856,6 +1936,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="TrichinellosisSecond" class="cell-border" style="width:100%">
+                  <caption>Age, Cases in the United States from 2011-2015</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1878,6 +1959,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Tuberculosis" class="cell-border" style="width:100%">
+                  <caption>Year, Cases, Race/Ethnicity in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1901,6 +1983,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="TuberculosisSecond" class="cell-border" style="width:100%">
+                  <caption>Year, Cases, Age in the United States</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1923,6 +2006,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="TuberculosisThird" class="cell-border" style="width:100%">
+                  <caption>Age, Cases, Gender in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1947,6 +2031,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Tularemia" class="cell-border" style="width:100%">
+                  <caption>State, Cases in the United States from 2008-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1972,6 +2057,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="TularemiaSecond" class="cell-border" style="width:100%">
+                  <caption>Age, Cases, Gender in the United States from 2001-2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1996,6 +2082,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Vibrosis" class="cell-border" style="width:100%">
+                  <caption>Species, Cases in the United States from 2010-2014</caption>
                     <thead>
                       <tr>
                         <th>Genus and Species of Vibrionaceae</th>
@@ -2022,6 +2109,9 @@
               <div class="col-12">
                 <div class="card dashboard">
                  <table id="Zika-Virus" class="cell-border" style="width:100%">
+                  <caption>State, Symptomatic/Presumptive Cases in the United States from 2016-2020. Presumptive viremic blood donors are people who reported no symptoms at the time of donating blood, but whose blood tested positive when screened for the presence of Zika virus RNA by the blood collection agency.
+                    <a href="https://www.cdc.gov/zika/reporting/2020-case-counts.html"> (Source)</a> 
+                  </caption>
                     <thead>
                       <tr>
                         <th>State</th>

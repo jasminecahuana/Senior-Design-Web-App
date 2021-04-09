@@ -16,6 +16,14 @@ body {
 .dashboard{
   background-color: #787d82 !important;
   overflow: auto;
+  width: 75%;
+  margin: auto;
+}
+
+caption{
+  color: black;
+  margin: 8px; 
+  background-color: red;
 }
 /* Navigation menu before it's open  */
 .sidenav {
@@ -82,6 +90,12 @@ h3 {
   background-color: rgb(58, 57, 61);
 }
 h4 {
+  margin-top:8px;
+  color:white;
+  font-size: x-large;
+}
+
+h5{
   margin-top:8px;
   color:white;
 }
