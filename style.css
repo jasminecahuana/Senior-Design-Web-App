@@ -24,55 +24,79 @@ caption{
   color: black;
   margin: 8px; 
   background-color: red;
+  font-weight: bold;
 }
-/* Navigation menu before it's open  */
+
+/* A fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 450px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #2e2e35;
-  overflow-x: auto;
-  transition: 0.5s;
-  padding-top: 60px;
+  background-color: rgb(31, 31, 31);
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-
-/* Navigation menu after it's open */
-.sidenav a {
-  padding: 1px 10px;
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #9d9ea7;
+  color: #818181;
   display: block;
-  transition: 0.3s;
-  width: auto;
-}
-/* Hovering over a menu selection */
-.sidenav ul li a:hover {
-  background-color: #a2a2aa;
-}
-
-/* Navigation close menu button */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 450px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+/* .active {
+  background-color: rgb(160, 23, 23);
+  color: white;
+} */
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 2px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav a {font-size: 25px;}
 }
 
 .btn-link {
   font-weight: 400;
   color: #ffffff;
   text-decoration: underline;
+  font-size: smaller;
 }
 
 a {
@@ -81,6 +105,13 @@ a {
   text-decoration: underline;
 }
 
+h2 {
+  font-size: x-large;
+  font-weight: bold;
+  color: white;
+  padding: 15px;
+  background-color: rgb(129, 31, 31);
+}
 
 h3 {
   font-size: x-large;
@@ -97,6 +128,7 @@ h4 {
 
 h5{
   margin-top:8px;
+  padding: -10px;
   color:white;
 }
 

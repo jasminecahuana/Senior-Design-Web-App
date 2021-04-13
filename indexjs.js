@@ -23,24 +23,42 @@ $(document).ready(function () {
   })
 });
 
-// navigation function to the About Us page
-function myFunction() {
-  location.replace("AboutUs.html")
-}
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+$(function () {
 
-// open navigation menu
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
 
-//close navigation menu
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+});
 
-// for navigation menu clicking
-$(document).ready(function() {
-  $('.click').click(function() {
-          $('.nav__right').slideToggle("fast");
+// On dropdown click, close all other open dropdowns
+$(document).ready(function () {
+  $(".dropdown-btn").next().addClass("collapsed").slideUp();
+
+  $(".sidenav").on('click', '.dropdown-btn', function (event) {
+      event.preventDefault();
+      var currentClass = $(this).next().prop('class');
+      if (currentClass == "active") {
+          $(this).next().removeClass("expanded");
+          $(this).next().addClass("collapsed");
+          $(this).next().slideUp(); 
+      } else {
+          $(".expanded").slideUp().addClass("collapsed").removeClass("expanded");
+          $(this).next().removeClass("collapsed");
+          $(this).next().addClass("expanded");
+          $(this).next().slideDown();
+      }
+
   });
 });
