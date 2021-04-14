@@ -48,6 +48,47 @@ $(document).ready(function() {
     links.forEach(function (link) {
         link.addEventListener('click', function () {
             switch(link.dataset.diseaseLink){
+                case "COVID-Homepage":
+                    table = $('#COVID-AgeGenderDeaths').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQuery.php",
+                        data:{
+                            dataset: "COVID-AgeGenderDeaths",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'sex'},
+                            {data: 'age_group'},
+                            {data: 'covid_19_deaths'},
+                            {data: 'total_deaths'},
+                            {data: 'pneumonia_deaths'},
+                            {data: 'pneumonia_and_covid_19_deaths'},
+                            {data: 'influenza_deaths'},
+                            {data: 'pneumonia_influenza_or_covid'}    
+                        ]
+                    })
+                    secondTable = $('#COVID-StateDeaths').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQuery.php",
+                        data:{
+                            dataset: "COVID-StateDeaths",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'state'},
+                            {data: 'covid_19_deaths'},
+                            {data: 'total_deaths'},
+                            {data: 'pneumonia_deaths'},
+                            {data: 'pneumonia_and_covid_19_deaths'},
+                            {data: 'influenza_deaths'},
+                            {data: 'pneumonia_influenza_or_covid'}    
+                        ]
+                    });
+                    break;
                 case "COVID-AgeGenderDeaths":
                     table = $('#COVID-AgeGenderDeaths').DataTable( {
                         destroy: true,

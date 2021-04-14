@@ -23,14 +23,15 @@ body {
 caption{
   color: black;
   margin: 8px; 
-  background-color: red;
-  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  font-size: x-large;
 }
 
 /* A fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: 450px;
+  width: 350px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -45,6 +46,7 @@ caption{
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #818181;
   display: block;
   border: none;
@@ -62,7 +64,7 @@ caption{
 
 /* Main content */
 .main {
-  margin-left: 450px; /* Same as the width of the sidenav */
+  margin-left: 350px; /* Same as the width of the sidenav */
   font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -106,11 +108,12 @@ a {
 }
 
 h2 {
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 15px;
-  background-color: rgb(129, 31, 31);
+  background-color: rgb(255, 255, 255);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 h3 {
