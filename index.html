@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Line 1125, Line 313 -->
 
 <head>
   <meta charset="UTF-8">
@@ -49,8 +48,6 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-      <a data-disease-link="COVID-Homepage"><button class="btn btn-link" type="button"
-          data-disease-link="COVID-Homepage">Homepage</button></a>
       <a data-disease-link="COVID-AgeGenderDeaths"><button class="btn btn-link" type="button"
           data-disease-link="COVID-AgeGenderDeaths">Age/Gender</button></a>
       <a data-disease-link="COVID-StateDeaths"><button class="btn btn-link" type="button"
@@ -492,7 +489,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <div class="navbar-nav ml-auto">
             <div class="nav-item">
-              <a href="AboutUs.html" class="nav-link">About Us</a>
+              <a href="AboutUs.html" class="nav-link">About</a>
             </div>
           </div>
         </div>
@@ -507,59 +504,51 @@
             <div class="row">
               <div class="col">
                 <div class="card" class="btn btn-link" type="button" data-disease-link="Measles" >
-                  <h5>Most</h5>
-                  <h5>Contagious</h5>
+                  <h5>Most Contagious</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button"
                 data-disease-link="COVID-Homepage">
-                  <h5>Most</h5>
-                  <h5>Deadly</h5>
+                  <h5>Most Deadly</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button"
                 data-disease-link="COVID-Homepage">
-                  <h5>Most</h5>
-                  <h5>Common</h5>
+                  <h5>Most Common</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button" data-disease-link="Zika Virus">
-                  <h5>Most</h5>
-                  <h5>Rare</h5>
+                  <h5>Most Uncommon</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button" data-disease-link="Disease by Age">
-                  <h5>Disease by</h5>
-                  <h5>Age</h5>
+                  <h5>Disease by Age</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button" data-disease-link="Disease by Gender">
-                  <h5>Disease by</h5>
-                  <h5>Gender</h5>
+                  <h5>Disease by Gender</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button" data-disease-link="Disease by State">
-                  <h5>Disease by</h5>
-                  <h5>State</h5>
+                  <h5>Disease by State</h5>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card" class="btn btn-link" type="button" data-disease-link="Disease by Race">
-                  <h5>Disease by</h5>
-                  <h5>Race</h5>
+                  <h5>Disease by Race</h5>
                 </div>
               </div>
             </div>
@@ -569,11 +558,10 @@
     </div>
 
     <!--Disease Dashboards-->
-    <!--This section layout is set, however, if we change the data-disease-link value, we must change the data-disease-dashboard value so they are equal to each other and will show the correct disease dashboard. Every div containing the dashboard will have the style="display: none;" EXCEPT the first one because thats our covid/home dashboard  -->
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <!-- All covid data / homepage -->
+          <!-- All Covid Tableau visualizations+Twitter / Homepage -->
           <div data-disease-dashboard="COVID-Homepage">
             <div class="section-header section" id="COVID">
               <h4>COVID-19 - Dashboard</h4>
@@ -3276,8 +3264,8 @@
               </div>
             </div>
           </div>
-          <!-- </div> -->
 
+          <!-- Disease by Analysis Features Dashboards  -->
           <div style="display: none;" data-disease-dashboard="Disease by State">
             <div class="section-header section" id="NND">
               <h4>Disease by State Dashboard</h4>
@@ -3323,7 +3311,6 @@
               <h4>Disease by Race Dashboard</h4>
             </div>
             Disease by Race Placeholder
-
           </div>
         </div>
       </div>
