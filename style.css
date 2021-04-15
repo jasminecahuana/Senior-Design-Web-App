@@ -16,8 +16,6 @@ body {
 .dashboard{
   background-color: #787d82 !important;
   overflow: auto;
-  width: 75%;
-  margin: auto;
 }
 
 caption{
@@ -25,13 +23,13 @@ caption{
   margin: 8px; 
   background-color: white;
   text-align: center;
-  font-size: x-large;
+  font-size: 16px;
 }
 
 /* A fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: 350px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -45,7 +43,7 @@ caption{
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 16px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #818181;
   display: block;
@@ -64,7 +62,7 @@ caption{
 
 /* Main content */
 .main {
-  margin-left: 350px; /* Same as the width of the sidenav */
+  margin-left: 300px; /* Same as the width of the sidenav */
   font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -108,7 +106,7 @@ a {
 }
 
 h2 {
-  font-size: xx-large;
+  font-size: 24px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   padding: 15px;
@@ -117,7 +115,7 @@ h2 {
 }
 
 h3 {
-  font-size: x-large;
+  font-size: 20px;
   font-weight: bold;
   color: white;
   padding: 15px;
@@ -126,12 +124,12 @@ h3 {
 h4 {
   margin-top:8px;
   color:white;
-  font-size: x-large;
+  font-size: 18px;
 }
 
 h5{
+  font-size: 16px;
   margin-top:8px;
-  padding: -10px;
   color:white;
 }
 
@@ -191,4 +189,22 @@ p{
   margin: 0 auto;
   pointer-events: all;
   background-color: #343a40;
+}
+
+/*fixing text wrap to allow responsiveness*/
+.navbar-brand{
+  white-space: normal;
+}
+
+/*adjusting table font*/
+td, th{
+  font-size: 14px;
+}
+
+label{
+  font-size: 16px;
+}
+
+.dataTables_wrapper { 
+  font-size: 14px 
 }
