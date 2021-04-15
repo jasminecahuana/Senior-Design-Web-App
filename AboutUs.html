@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" media="screen" href="particles.js/demo/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
@@ -11,7 +11,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   text-align: center;
-  background-color: #6f7277;
+  background-color: lightsteelblue;
 }
 
 html {
@@ -77,6 +77,13 @@ h2 {
   font-size: large !important;
 }
 
+h3 {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin: 8px;
+}
+
 .nav-link {
   position: absolute;
   top: 10px;
@@ -101,9 +108,10 @@ h2 {
 </head>
 <body>
 
+<div id="particles-js" style="position: fixed;"></div>
 <div class="top-nav-bar section">
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <div class="navbar-brand" onClick="window.location.reload();">About Us</div>
+    <div class="navbar-brand" onClick="window.location.reload();">About</div>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <div class="navbar-nav ml-auto">
         <div class="nav-item">
@@ -176,5 +184,21 @@ h2 {
     </div>
   </div>
 </div>
+<div>
+  <div class="card">
+  <h3>The <span style="font-weight: bold; color: #6495ED">Intelligent Infectious Disease Tracking System</span> collects, processes, analyzes, and visualizes big data
+     from the CDC to provide accurate data on nationally notifiable infectious diseases in the United States. 
+    Each of the 40 diseases on the site has tables of data with various analysis features such as state, gender, 
+    age, race, and more. COVID-19 data is continuously updated using a Socrata API, some data weekly and other data monthly, depending on
+    how often the CDC updates the specific data. All other diseases have data retrieved from CSV files on the CDC website, which was then converted
+    to data in our MySQL database that the website queries from. Diseases with Tableau visualizations allow you to distinguish how many different
+    cases there are for a specific analysis feature over a span of years.</h3>
+  </div>
+</div>
+</div>
+
+<script src="particles.js/particles.js"></script>
+<script src="particles.js/demo/js/app.js"></script>
+
 </body>
 </html>
