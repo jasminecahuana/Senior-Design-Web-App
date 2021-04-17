@@ -5,13 +5,10 @@
 
     switch($q){
         case "COVID-StateDeaths":
-            $sql = "SELECT state, covid_19_deaths, total_deaths, pneumonia_deaths, pneumonia_and_covid_19_deaths, influenza_deaths, pneumonia_influenza_or_covid FROM iidts_prod.disease_covid19_cdc_api_t where age_group='All Ages' and sex='All Sexes' and data_as_of='2021-03-10' LIMIT 54;;";
+            $sql = "SELECT state, covid_19_deaths, total_deaths, pneumonia_deaths, pneumonia_and_covid_19_deaths, influenza_deaths, pneumonia_influenza_or_covid FROM iidts_prod.disease_covid19_cdc_api_t where age_group='All Ages' and sex='All Sexes' and data_as_of='2021-03-10' LIMIT 54;";
             break;
         case "COVID-AgeGenderDeaths":
             $sql = "SELECT sex, age_group, covid_19_deaths, total_deaths, pneumonia_deaths, pneumonia_and_covid_19_deaths, influenza_deaths, pneumonia_influenza_or_covid FROM iidts_prod.disease_covid19_cdc_api_t where state='United States' and data_as_of='2021-03-10' limit 51;";
-            break;
-        case "Anaplasmosis-MonthOfOnset":
-            $sql = "SELECT * FROM iidts_prod.disease_anaplasmosis_monthofonset_t limit 16;";
             break;
         case "Anaplasmosis-State":
             $sql = "SELECT State, `Cases per Million (2000-2018)` FROM iidts_prod.disease_anaplasmosis_state_t limit 51;";
