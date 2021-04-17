@@ -22,7 +22,7 @@
         case "Babesiosis":
             $sql = "SELECT State, `2011 (Cases)`,`2012 (Cases)`,`2013 (Cases)`,`2014 (Cases)`,`2015 (Cases)`,`2016 (Cases)`,`2017 (Cases)`,`2018 (Cases)` FROM iidts_prod.disease_babesiosis_state_t limit 50;";
             break;
-        case "Botulism-Cause":
+        case "Botulism-StateCause":
             $sql = "SELECT * FROM iidts_prod.disease_botulism_cause_t limit 7;";
             break;
         case "Botulism-Transmission":
@@ -235,7 +235,7 @@
         case "Q Fever-MonthOfOnset":
             $sql = "SELECT * FROM iidts_prod.disease_qfever_monthofonset_t limit 12;";
             break;
-        case "Rabies (Human)":
+        case "Rabies-StateAgeGenderVariant":
             $sql = "SELECT * FROM iidts_prod.disease_rabies_casechar_t limit 25;";
             break;
         case "Spotted Fever-Age":

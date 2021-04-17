@@ -49,7 +49,7 @@
     </button>
     <div class="dropdown-container">
       <a data-disease-link="COVID-AgeGenderDeaths"><button class="btn btn-link" type="button"
-          data-disease-link="COVID-AgeGenderDeaths">Age/Gender</button></a>
+          data-disease-link="COVID-AgeGenderDeaths">Gender/Age</button></a>
       <a data-disease-link="COVID-StateDeaths"><button class="btn btn-link" type="button"
           data-disease-link="COVID-StateDeaths">State</button></a>
     </div>
@@ -58,6 +58,8 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
+      <a data-disease-link="Anaplasmosis-MonthOfOnset"><button class="btn btn-link" type="button"
+        data-disease-link="Anaplasmosis-MonthOfOnset">Month of Onset</button></a>
       <a data-disease-link="Anaplasmosis-State"><button class="btn btn-link" type="button"
           data-disease-link="Anaplasmosis-State">State</button></a>
       <a data-disease-link="Anaplasmosis-Year"><button class="btn btn-link" type="button"
@@ -76,8 +78,8 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-      <a data-disease-link="Botulism-Cause"><button class="btn btn-link" type="button"
-          data-disease-link="Botulism-Cause">State/Cause/Case Type </button></a>
+      <a data-disease-link="Botulism-StateCause"><button class="btn btn-link" type="button"
+          data-disease-link="Botulism-StateCause">State/Cause/Case Type </button></a>
       <a data-disease-link="Botulism-Transmission"><button class="btn btn-link" type="button"
           data-disease-link="Botulism-Transmission">Transmission/Age/Gender</button></a>
     </div>
@@ -392,8 +394,8 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-      <a data-disease-link="Rabies (Human)"><button class="btn btn-link" type="button"
-          data-disease-link="Rabies (Human)">Rabies (Human)</button></a>
+      <a data-disease-link="Rabies-StateAgeGenderVariant"><button class="btn btn-link" type="button"
+          data-disease-link="Rabies-StateAgeGenderVariant">State/Age/Gender/Variant</button></a>
     </div>
 
     <button class="dropdown-btn">Spotted Fever
@@ -588,12 +590,12 @@
                   <div class="col-12">
                     <div class="card">
                       <div class="card-body">
-                        <h5 class="card-title">Twitter</h5>
-                        <h5 class="card-subtitle mb-2" style="color: red;">Tweets by CDC</h5>
+                        <h5 class="card-title" style="font-size:larger">Intelligent Twitter Data</h5>
+                        <h5 class="card-subtitle mb-2" style="color: rgb(192, 45, 45); font-weight: bold;">Tweets by CDC</h5>
                         <p class="card-text mb-2">The Twitter stream above provides a real-time stream of tweets
                           from the CDC. All of the data collected and presented in this project have originated from
                           available COVID-19 and Nationally Notifiable Diseases data the CDC provides.</p>
-                        <h5 class="card-subtitle mb-2" style="color: red;">Word Cloud</h5>
+                        <h5 class="card-subtitle mb-2" style="color: rgb(192, 45, 45); font-weight: bold">Word Cloud</h5>
                         <p class="card-text mb-2">The image provided below represents the Twitter Natural
                           Language Processing portion of this project. The word cloud is created by collecting tweets
                           using Twitter libraries, tokenization, removing stop words, lemmatization, and word frequency.
@@ -628,14 +630,14 @@
           <!-- Covid Subpages -->
           <div style="display: none;" data-disease-dashboard="COVID-StateDeaths">
             <div class="section-header section" id="NND">
-              <h4>COVID-19 - State/Deaths Dashboard</h4>
+              <h4>COVID-19 - State Dashboard</h4>
             </div>
-            COVID-19 - State/Deaths Dashboard Placeholder
+            COVID-19 - State Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="COVID-StateDeaths" class="cell-border" style="width:100%">
-                    <caption>State, Deaths related to COVID-19/Pneumonia/Influenza in the United States</caption>
+                    <caption>State Deaths related to COVID-19/Pneumonia/Influenza in the United States since the beginning of the pandemic</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -647,7 +649,7 @@
                         <th>Pneumonia,Influenza, Or COVID-19 Deaths</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('COVID-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -655,18 +657,17 @@
 
           <div style="display: none;" data-disease-dashboard="COVID-AgeGenderDeaths">
             <div class="section-header section" id="NND">
-              <h4>COVID-19 - Age/Gender/Deaths Dashboard</h4>
+              <h4>COVID-19 - Gender/Age Dashboard</h4>
             </div>
-            COVID-19 - Age/Gender/Deaths Dashboard Placeholder
+            COVID-19 - Gender/Age Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="COVID-AgeGenderDeaths" class="cell-border" style="width:100%">
-                    <caption>Sex, Age, and Deaths related to COVID-19/Pneumonia/Influenza in the United States
-                    </caption>
+                    <caption>Gender, Age, and Deaths related to COVID-19/Pneumonia/Influenza in the United States since the beginning of the pandemic</caption>
                     <thead>
                       <tr>
-                        <th>Sex</th>
+                        <th>Gender</th>
                         <th>Age Group</th>
                         <th>COVID-19 Deaths</th>
                         <th>Total Deaths</th>
@@ -676,7 +677,7 @@
                         <th>Pneumonia,Influenza, Or COVID-19 Deaths</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('COVID-GenderAge.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -692,14 +693,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Anaplasmosis-MonthOfOnset" class="cell-border" style="width:100%">
-                    <caption>Month of Onset Cases in the United States in 2000-2018</caption>
+                    <caption>Month of Onset Cases related to Anaplasmosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Month of Onset</th>
                         <th>Cases (2000-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Anaplasmosis-MonthOfOnset.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -714,14 +715,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Anaplasmosis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases per Million in the United States in 2000-2018</caption>
+                    <caption>State Cases per Million related to Anaplasmosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases per Million (2000-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Anaplasmosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -730,8 +731,7 @@
           <div style="display: none;" data-disease-dashboard="Anaplasmosis-Year">
             <div class="section-header section" id="NND">
               <h4>Anaplasmosis - Year Dashboard</h4>
-            </div>
-            
+            </div>        
             <div class="row">
               <div class="col-12">
                 <!--Another way to embed the tableau visuals, except its embedding an image so its not interactable-->
@@ -743,20 +743,18 @@
 
               </div>
             </div>
-
-
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Anaplasmosis-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States in 2000-2018</caption>
+                    <caption>Yearly Cases related to Anaplasmosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases (2000 - 2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Anaplasmosis-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -771,7 +769,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Babesiosis" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2011-2018</caption>
+                    <caption>State Cases related to Babesiosis in the United States in 2011-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -785,22 +783,22 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Babesiosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div style="display: none;" data-disease-dashboard="Botulism-Cause">
+          <div style="display: none;" data-disease-dashboard="Botulism-StateCause">
             <div class="section-header section" id="NND">
-              <h4>Botulism - Cause Dashboard</h4>
+              <h4>Botulism - State/Cause Dashboard</h4>
             </div>
-            Botulism - Cause Dashboard Placeholder
+            Botulism - State/Cause Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
-                  <table id="Botulism-Cause" class="cell-border" style="width:100%">
-                    <caption>State, Confirmed or Suspected Food, Toxin Type Cases in the United States by Month in
+                  <table id="Botulism-StateCause" class="cell-border" style="width:100%">
+                    <caption>State, Confirmed or Suspected Food, Toxin Type Cases related to Botulism in the United States by Month in
                       2017</caption>
                     <thead>
                       <tr>
@@ -811,7 +809,7 @@
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Botulism-StateCause.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -826,7 +824,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Botulism-Transmission" class="cell-border" style="width:100%">
-                    <caption>Transmission Type, Age, Gender Cases and Deaths in the United States in 2017</caption>
+                    <caption>Transmission Type, Age, Gender Cases and Deaths related to Botulism in the United States in 2017</caption>
                     <thead>
                       <tr>
                         <th>Transmission Category</th>
@@ -838,7 +836,7 @@
                         <th>Female</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Botulism-TransmissionTypeAgeGender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -853,14 +851,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Brucellosis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2010</caption>
+                    <caption>State Cases related to Brucellosis in the United States in 2010</caption>
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases (2010)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Brucellosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -875,14 +873,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Brucellosis-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States in 2010</caption>
+                    <caption>Yearly Cases related to Brucellosis in the United States in 2010</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Brucellosis-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -897,14 +895,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Campylobacteriosis" class="cell-border" style="width:100%">
-                    <caption>Outbreaks from Food Category in the United States in 2010-2017</caption>
+                    <caption>Outbreaks from Food Category related to Campylobacteriosis in the United States in 2010-2017</caption>
                     <thead>
                       <tr>
                         <th>Food Category</th>
                         <th>Outbreaks (2010-2017)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Campylobacteriosis-FoodCategoryOutbreaks.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -924,14 +922,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Candida-Auris" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States as of 2020</caption>
+                    <caption>State Cases related to Candida Auris in the United States as of 2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases (as of 2020)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('CandidaAuris-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -953,7 +951,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chancroid" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2014-2018</caption>
+                    <caption>State Cases related to Chancroid in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -964,7 +962,7 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Chancroid-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -979,7 +977,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chlamydia-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Age Cases and Rates related to Chlamydia in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -995,7 +993,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Chlamydia-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1010,7 +1008,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chlamydia-AgeGenderRace" class="cell-border" style="width:100%">
-                    <caption>Age, Race, and Gender Cases in the United States in 2018</caption>
+                    <caption>Age, Race, and Gender Cases related to Chlamydia in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1037,7 +1035,7 @@
                         <th>Female 2018 Cases (Hispanics)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Chlamydia-AgeGenderRace.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1052,7 +1050,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chlamydia-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State Cases and Rates related to Chlamydia in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1068,7 +1066,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Chlamydia-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1083,7 +1081,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chlamydia-StateFemale" class="cell-border" style="width:100%">
-                    <caption>State, Female Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State, Female Cases and Rates related to Chlamydia in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1099,7 +1097,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Chlamydia-StateFemale.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1114,7 +1112,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chlamydia-StateMale" class="cell-border" style="width:100%">
-                    <caption>State, Male Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State, Male Cases and Rates related to Chlamydia in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1130,7 +1128,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Chlamydia-StateMale.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1145,7 +1143,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Coccidioidomycosis" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in Specific States in the United States in 1998-2018</caption>
+                    <caption>Yearly Cases in Specific States related to Coccidioidomycosis in the United States in 1998-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1156,7 +1154,7 @@
                         <th>Total</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Coccidioidomycosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1171,7 +1169,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Congenital-Syphilis-BirthRegion" class="cell-border" style="width:100%">
-                    <caption>Region of Birth of Infant Cases in the United States in 2008-2014</caption>
+                    <caption>Region of Birth of Infant Cases related to Congenital Syphilis in the United States in 2008-2014</caption>
                     <thead>
                       <tr>
                         <th>Region of Birth of Infant</th>
@@ -1184,7 +1182,7 @@
                         <th>2014 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('CongenitalSyphilis-BirthRegionOfInfant.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1199,7 +1197,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Congenital-Syphilis-InfantVitals" class="cell-border" style="width:100%">
-                    <caption>Vital Status of Infant Cases in the United States in 2008-2014</caption>
+                    <caption>Vital Status of Infant Cases related to Congenital Syphilis in the United States in 2008-2014</caption>
                     <thead>
                       <tr>
                         <th>Vital Status of Infant</th>
@@ -1212,7 +1210,7 @@
                         <th>2014 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('CongenitalSyphilis-VitalStatusOfInfant.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1227,7 +1225,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Congenital-Syphilis-Race" class="cell-border" style="width:100%">
-                    <caption>Race/Ethinicity of Mother, Cases in the United States in 2008-2014. This disease spread
+                    <caption>Race/Ethinicity of Mother, Cases related to Congenital Syphilis in the United States in 2008-2014. This disease spread
                       to the infant from the pregnant mother.</caption>
                     <thead>
                       <tr>
@@ -1241,7 +1239,7 @@
                         <th>2014 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('CongenitalSyphilis-RaceOfMother.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1256,7 +1254,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Cryptosporidiosis-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2018</caption>
+                    <caption>Age Cases and Rates related to Cryptosporidiosis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -1264,7 +1262,7 @@
                         <th>Rate per 100K population (2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Cryptosporidiosis-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1279,14 +1277,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Cryptosporidiosis-Gender" class="cell-border" style="width:100%">
-                    <caption>Gender Cases in the United States in 2018</caption>
+                    <caption>Gender Cases related to Cryptosporidiosis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Gender</th>
                         <th>Cases (2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Cryptosporidiosis-Gender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1301,14 +1299,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Cryptosporidiosis-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases in the United States in 2018</caption>
+                    <caption>Race Cases related to Cryptosporidiosis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
                         <th>Cases (2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Cryptosporidiosis-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1323,7 +1321,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Cryptosporidiosis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2018</caption>
+                    <caption>State Cases and Rates related to Cryptosporidiosis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1331,7 +1329,7 @@
                         <th>Rate per 100K population (2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Cryptosporidiosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1346,7 +1344,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Dengue-StateLocalTrans" class="cell-border" style="width:100%">
-                    <caption>State and Locally-Transmitted Cases in the United States in 2017-2020</caption>
+                    <caption>State and Locally-Transmitted Cases related to Dengue in the United States in 2017-2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1360,7 +1358,7 @@
                         <th>2020 Rate (%)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Dengue-StateLocallyTransmitted.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1375,7 +1373,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Dengue-StateTravelTrans" class="cell-border" style="width:100%">
-                    <caption>State, Travel-Associated Cases and Rates in the United States in 2017-2020</caption>
+                    <caption>State, Travel-Associated Cases and Rates related to Dengue in the United States in 2017-2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1389,7 +1387,7 @@
                         <th>2020 Rate (%)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Dengue-StateTravelAssociated.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1404,14 +1402,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Ehrlichiosis-MonthOfOnset" class="cell-border" style="width:100%">
-                    <caption>Month of Onset Cases in the United States in 2000-2018</caption>
+                    <caption>Month of Onset Cases related to Ehrlichiosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Month of Onset</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Ehrlichiosis-MonthOfOnset.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1426,14 +1424,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Ehrlichiosis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2000-2018</caption>
+                    <caption>State Cases related to Ehrlichiosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases per Million (2000-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Ehrlichiosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1448,14 +1446,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Ehrlichiosis-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States in 2000-2018</caption>
+                    <caption>Yearly Cases related to Ehrlichiosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Ehrlichiosis-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1470,7 +1468,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Giardiasis-State" class="cell-border" style="width:100%">
-                    <caption>State, Cases, Rates, and Outbreak-Associated Cases in the United States</caption>
+                    <caption>State Cases, Rates, and Outbreak-Associated Cases related to Giardiasis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1479,7 +1477,7 @@
                         <th>Number of Outbreak-Associated Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Giardiasis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1494,14 +1492,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Giardiasis-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States in 1995-2018</caption>
+                    <caption>Yearly Cases related to Giardiasis in the United States in 1995-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Giardiasis-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1516,7 +1514,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Gonorrhea-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2014-2018</caption>
+                    <caption>Age Cases related to Gonorrhea in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1527,7 +1525,7 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Gonorrhea-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1542,7 +1540,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Gonorrhea-AgeGenderRace" class="cell-border" style="width:100%">
-                    <caption>Age, Cases for Female, Male, Both related to Race/Ethincity in the United States in 2018
+                    <caption>Age and Race Cases for Female, Male, Both related to Gonorrhea in the United States in 2018
                     </caption>
                     <thead>
                       <tr>
@@ -1570,7 +1568,7 @@
                         <th>Female 2018 Cases (Hispanics)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Gonorrhea-AgeGenderRace.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1585,7 +1583,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Gonorrhea-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2014-2018</caption>
+                    <caption>State Cases related to Gonorrhea in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1596,7 +1594,7 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Gonorrhea-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1611,7 +1609,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Gonorrhea-StateFemale" class="cell-border" style="width:100%">
-                    <caption>State, Female Cases in the United States in 2014-2018</caption>
+                    <caption>State, Female Cases related to Gonorrhea in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1627,7 +1625,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Gonorrhea-StateFemale.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1642,7 +1640,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Gonorrhea-StateMale" class="cell-border" style="width:100%">
-                    <caption>State, Male Cases in the United States in 2014-2018</caption>
+                    <caption>State, Male Cases related to Gonorrhea in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1658,7 +1656,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Gonorrhea-StateMale.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1673,7 +1671,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Haemophilus-Influenzae-Age" class="cell-border" style="width:100%">
-                    <caption>Age and Case Type in the United States in 2018</caption>
+                    <caption>Age and Type Cases related to Haemophilus Influenzae in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1687,7 +1685,7 @@
                         <th>Serotype Unknown (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HaemophilusInfluenzae-AgeCaseType.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1702,7 +1700,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Haemophilus-Influenzae-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases and Rates in the United States in 2018</caption>
+                    <caption>Race Cases and Rates related to Haemophilus Influenzae in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -1710,7 +1708,7 @@
                         <th>Rate per 100K population</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HaemophilusInfluenzae-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1725,14 +1723,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hantavirus-Infection" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 1993-2017</caption>
+                    <caption>State Cases related to Hantavirus Infection in the United States in 1993-2017</caption>
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases (1993-2017)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Hantavirus-Infection.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1747,7 +1745,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-A-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Age Cases and Rates related to Hepatitis A in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1763,7 +1761,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisA-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1778,7 +1776,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-A-Gender" class="cell-border" style="width:100%">
-                    <caption>Gender Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Gender Cases and Rates related to Hepatitis A in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Gender</th>
@@ -1794,7 +1792,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisA-Gender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1809,7 +1807,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-A-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Race Cases and Rates related to Hepatitis A in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Race/Ethnicity</th>
@@ -1825,7 +1823,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisA-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1840,7 +1838,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-A-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State Cases and Rates related to Hepatitis A in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -1856,7 +1854,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisA-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1871,7 +1869,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-A-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases and Rates in the United States</caption>
+                    <caption>Yearly Cases and Rates related to Hepatitis A in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -1879,7 +1877,7 @@
                         <th>Rate per 100K population</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisA-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1894,7 +1892,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-B-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Age Cases and Rates related to Hepatitis B in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -1910,7 +1908,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisB-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1925,7 +1923,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-B-Gender" class="cell-border" style="width:100%">
-                    <caption>Gender Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Gender Cases and Rates related to Hepatitis B in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Gender</th>
@@ -1941,7 +1939,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisB-Gender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1956,7 +1954,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-B-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Race Cases and Rates related to Hepatitis B in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -1972,7 +1970,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisB-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -1987,7 +1985,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-B-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State Cases and Rates related to Hepatitis B in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2003,7 +2001,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisB-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2018,7 +2016,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-B-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases and Rates in the United States</caption>
+                    <caption>Yearly Cases and Rates related to Hepatitis B in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -2026,7 +2024,7 @@
                         <th>Rate per 100K population</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisB-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2041,7 +2039,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-C-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Age Cases and Rates related to Hepatitis C in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -2057,7 +2055,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisC-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2072,7 +2070,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-C-Gender" class="cell-border" style="width:100%">
-                    <caption>Gender Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Gender Cases and Rates related to Hepatitis C in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Gender</th>
@@ -2088,7 +2086,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisC-Gender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2103,7 +2101,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-C-Race" class="cell-border" style="width:100%">
-                    <caption>Race/Ethinicity Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Race/Ethinicity Cases and Rates related to Hepatitis C in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Race/Ethnicity</th>
@@ -2119,7 +2117,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisC-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2134,7 +2132,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Hepatitis-C-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Yearly Cases and Rates related to Hepatitis C in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -2142,7 +2140,7 @@
                         <th>Rate per 100K population</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HepatitisC-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2157,7 +2155,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="HIV-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2014-2018</caption>
+                    <caption>Age Cases related to HIV in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -2168,7 +2166,7 @@
                         <th>2018 (Estimated Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HIV-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2183,7 +2181,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="HIV-Gender" class="cell-border" style="width:100%">
-                    <caption>Gender Cases in the United States in 2014-2018</caption>
+                    <caption>Gender Cases related to HIV in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Gender</th>
@@ -2194,7 +2192,7 @@
                         <th>2018 (Estimated Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HIV-Gender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2209,7 +2207,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="HIV-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases in the United States in 2014-2018</caption>
+                    <caption>Race Cases related to HIV in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -2220,7 +2218,7 @@
                         <th>2018 (Estimated Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('HIV-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2235,7 +2233,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Novel-Influenza-A-Virus-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2011-2020</caption>
+                    <caption>State Cases related to Novel Influenza A Virus in the United States in 2011-2020</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2251,7 +2249,7 @@
                         <th>2020 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('NovelInfluenzaAVirus-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2266,7 +2264,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Novel-Influenza-A-Virus-Type" class="cell-border" style="width:100%">
-                    <caption>Virus Type Cases in the United States in 2011-2020</caption>
+                    <caption>Virus Type Cases related to Novel Influenza A Virus in the United States in 2011-2020</caption>
                     <thead>
                       <tr>
                         <th>Virus Type</th>
@@ -2282,7 +2280,7 @@
                         <th>2020 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('NovelInfluenzaAVirus-Type.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2297,7 +2295,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Pneumococcal-Disease" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2016</caption>
+                    <caption>Age Cases and Rates related to Pneumococcal Disease in the United States in 2016</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -2305,7 +2303,7 @@
                         <th>Rate (per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('PneumococcalDisease-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2320,7 +2318,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Legionellosis-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2014-2017</caption>
+                    <caption>Age Cases related to Legionellosis in the United States in 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -2330,7 +2328,7 @@
                         <th>2017 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Legionellosis-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2345,7 +2343,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Legionellosis-Gender" class="cell-border" style="width:100%">
-                    <caption>Gender Cases in the United States in 2014-2017</caption>
+                    <caption>Gender Cases related to Legionellosis in the United States in 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>Gender</th>
@@ -2355,7 +2353,7 @@
                         <th>2017 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Legionellosis-Gender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2370,7 +2368,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Legionellosis-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases in the United States in 2014-2017</caption>
+                    <caption>Race Cases related to Legionellosis in the United States in 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>Race</th>
@@ -2380,7 +2378,7 @@
                         <th>2017 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Legionellosis-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2395,7 +2393,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Legionellosis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2014-2017</caption>
+                    <caption>State Cases related to Legionellosis in the United States in 2014-2017</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2405,7 +2403,7 @@
                         <th>2017 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Legionellosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2420,7 +2418,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Lyme-Disease-AgeGender" class="cell-border" style="width:100%">
-                    <caption>Age and Gender Cases in the United States in 2001-2018</caption>
+                    <caption>Age and Gender Cases related to Lyme Disease in the United States in 2001-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -2429,7 +2427,7 @@
                         <th>Total Cases (2001-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('LymeDisease-AgeGender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2444,14 +2442,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Lyme-Disease-MonthOfOnset" class="cell-border" style="width:100%">
-                    <caption>Month of Onset Cases in the United States in 2001-2018</caption>
+                    <caption>Month of Onset Cases related to Lyme Disease in the United States in 2001-2018</caption>
                     <thead>
                       <tr>
                         <th>Month of Onset</th>
                         <th>Cases (2008-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('LymeDisease-MonthOfOnset.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2466,7 +2464,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Lyme-Disease-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2009-2018</caption>
+                    <caption>State Cases related to Lyme Disease in the United States in 2009-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2482,7 +2480,7 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('LymeDisease-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2497,7 +2495,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Lyme-Disease-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases and Rates in the United States in 2009-2018</caption>
+                    <caption>Yearly Cases and Rates related to Lyme Disease in the United States in 2009-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -2505,7 +2503,7 @@
                         <th>Rate per 100K population</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('LymeDisease-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2520,14 +2518,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Measles" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States in 2010-2019</caption>
+                    <caption>Yearly Cases related to Measles in the United States in 2010-2019</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Measles-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2542,7 +2540,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Meningococcal-Disease" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2015-2018</caption>
+                    <caption>Age Cases related to Meningococcal Disease in the United States in 2015-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -2552,7 +2550,7 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('MeningococcalDisease-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2567,14 +2565,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Mumps" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States in 2000-2019</caption>
+                    <caption>Yearly Cases related to Mumps in the United States in 2000-2019</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Mumps-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2589,7 +2587,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Pertussis-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2018</caption>
+                    <caption>Age Cases and Rates related to Pertussis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -2598,7 +2596,7 @@
                         <th>2018 (% Hospitalized by age)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Pertussis-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2613,7 +2611,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Pertussis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2018</caption>
+                    <caption>State Cases and Rates related to Pertussis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2621,7 +2619,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Pertussis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2636,7 +2634,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Plague" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases and Deaths in the United States in 2000-2018</caption>
+                    <caption>Yearly Cases and Deaths related to Plague in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -2644,7 +2642,7 @@
                         <th>Deaths</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Plague-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2659,14 +2657,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Q-Fever-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2000-2017</caption>
+                    <caption>Age Cases related to Q Fever in the United States in 2000-2017</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
                         <th>Cases per Million (2000-2017)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('QFever-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2681,37 +2679,41 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Q-Fever-MonthOfOnset" class="cell-border" style="width:100%">
-                    <caption>Month of Onset Cases in the United States in 2000-2017</caption>
+                    <caption>Month of Onset Cases related to Q Fever in the United States in 2000-2017</caption>
                     <thead>
                       <tr>
                         <th>Month of Onset</th>
-                        <th>Q Fever Cases (2000-2017)</th>
+                        <th>Cases (2000-2017)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('QFever-MonthOfOnset.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div style="display: none;" data-disease-dashboard="Rabies (Human)">
+          <div style="display: none;" data-disease-dashboard="Rabies-StateAgeGenderVariant">
             <div class="section-header section" id="NND">
               <h4>Rabies (Human) Dashboard</h4>
             </div>
             Rabies (Human) Dashboard Placeholder
-            <!-- !!!!Make table or tableau data? -->
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
-                  <table id="Rabies-(Human)" class="cell-border" style="width:100%">
-                    <caption>Need To Fill</caption>
+                  <table id="Rabies-StateAgeGenderVariant" class="cell-border" style="width:100%">
+                    <caption>State, Age, Gender, and Variant Cases related to Rabies (Human) in the United States in 2009-2018</caption>
                     <thead>
                       <tr>
-                        <th>??</th>
-                        <th>??</th>
+                        <th>Date of Onset</th>
+                        <th>State</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Exposure Type</th>
+                        <th>Exposure From</th>
+                        <th>Rabies Virus Variant</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Rabies-StateAgeGenderVariant.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2726,14 +2728,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Spotted-Fever-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2000-2018</caption>
+                    <caption>Age Cases related to Spotted Fever Rickettsiosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Age (years)</th>
                         <th>Cases per Million (2000-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('SpottedFever-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2748,14 +2750,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Spotted-Fever-MonthOfOnset" class="cell-border" style="width:100%">
-                    <caption>Month of Onset Cases in the United States in 2000-2018</caption>
+                    <caption>Month of Onset Cases related to Spotted Fever Rickettsiosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Month of Onset</th>
                         <th>Cases (2000-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('SpottedFever-MonthOfOnset.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2770,14 +2772,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Spotted-Fever-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2018</caption>
+                    <caption>State Cases related to Spotted Fever Rickettsiosis in the United States in 2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
                         <th>Cases per Million (2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('SpottedFever-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2792,14 +2794,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Spotted-Fever-Year" class="cell-border" style="width:100%">
-                    <caption>Yearly Cases in the United States</caption>
+                    <caption>Yearly Cases related to Spotted Fever Rickettsiosis in the United States in 2000-2018</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
                         <th>Cases</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('SpottedFever-Year.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2814,7 +2816,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Syphilis-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>Age Cases and Rates related to Syphilis in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>Age</th>
@@ -2830,7 +2832,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Syphilis-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2845,7 +2847,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Syphilis-AgeGenderRace" class="cell-border" style="width:100%">
-                    <caption>Age, Cases for Female, Male, Both related to Race/Ethincity in the United States in 2018
+                    <caption>Age and Race Cases for Female, Male, Both related to Syphilis in the United States in 2018
                     </caption>
                     <thead>
                       <tr>
@@ -2873,7 +2875,7 @@
                         <th>Female 2018 Cases (Hispanics)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Syphilis-AgeGenderRace.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2883,7 +2885,6 @@
             <div class="section-header section" id="NND">
               <h4>Syphilis - State Dashboard</h4>
             </div>
-
             <div class="row">
               <div class="col-12">
                 <div class='tableauPlaceholder' style='width: 100%; height: 652px;'>
@@ -2900,13 +2901,11 @@
                 </div>
               </div>
             </div>
-
-
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Syphilis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State Cases and Rates related to Syphilis in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2922,7 +2921,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Syphilis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2937,7 +2936,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Syphilis-StateFemale" class="cell-border" style="width:100%">
-                    <caption>State, Female Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State, Female Cases and Rates related to Syphilis in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2953,7 +2952,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Syphilis-StateFemale.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2968,7 +2967,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Syphilis-StateMale" class="cell-border" style="width:100%">
-                    <caption>State, Male Cases and Rates in the United States in 2014-2018</caption>
+                    <caption>State, Male Cases and Rates related to Syphilis in the United States in 2014-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -2984,7 +2983,7 @@
                         <th>2018 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Syphilis-StateMale.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -2999,14 +2998,14 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Trichinellosis-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 2011-2015</caption>
+                    <caption>Age Cases related to Trichinellosis in the United States in 2011-2015</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
                         <th>Cases (2011-2015)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Trichinellosis-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3021,7 +3020,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Tuberculosis-Race" class="cell-border" style="width:100%">
-                    <caption>Race Cases in the United States in 1993-2019</caption>
+                    <caption>Race Cases related to Trichinellosis in the United States in 1993-2019</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -3036,7 +3035,7 @@
                         <th>Unknown</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Tuberculosis-Race.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3051,7 +3050,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Trichinellosis-State" class="cell-border" style="width:100%">
-                    <caption>State Cases and Rates in the United States in 2011-2015</caption>
+                    <caption>State Cases and Rates related to Trichinellosis in the United States in 2011-2015</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -3067,7 +3066,7 @@
                         <th>2015 (Rate per 100K population)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Trichinellosis-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3082,7 +3081,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Trichinellosis-SuspectMeat" class="cell-border" style="width:100%">
-                    <caption>Suspect Meat Cases in the United States in 2011-2015</caption>
+                    <caption>Suspect Meat Cases related to Trichinellosis in the United States in 2011-2015</caption>
                     <thead>
                       <tr>
                         <th>Suspect Meat</th>
@@ -3095,7 +3094,7 @@
                         <th>2015 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Trichinellosis-SuspectMeat.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3110,7 +3109,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Tuberculosis-Age" class="cell-border" style="width:100%">
-                    <caption>Age Cases in the United States in 1993-2019</caption>
+                    <caption>Age Cases related to Tuberculosis in the United States in 1993-2019</caption>
                     <thead>
                       <tr>
                         <th>Year</th>
@@ -3124,7 +3123,7 @@
                         <th>Unknown (Age)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Tuberculosis-Age.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3139,7 +3138,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Tuberculosis-AgeGender" class="cell-border" style="width:100%">
-                    <caption>Age and Gender Cases in the United States in 2019</caption>
+                    <caption>Age and Gender Cases related to Tuberculosis in the United States in 2019</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -3148,7 +3147,7 @@
                         <th>Female Cases (2019)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Tuberculosis-AgeGender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3163,7 +3162,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Tularemia-AgeGender" class="cell-border" style="width:100%">
-                    <caption>Age and Gender Cases in the United States in 2001-2018</caption>
+                    <caption>Age and Gender Cases related to Tularemia in the United States in 2001-2018</caption>
                     <thead>
                       <tr>
                         <th>Age (Years)</th>
@@ -3172,7 +3171,7 @@
                         <th>Female Cases (2001-2018)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Tularemia-AgeGender.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3187,7 +3186,7 @@
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Tularemia-State" class="cell-border" style="width:100%">
-                    <caption>State Cases in the United States in 2008-2018</caption>
+                    <caption>State Cases related to Tularemia in the United States in 2008-2018</caption>
                     <thead>
                       <tr>
                         <th>State</th>
@@ -3204,7 +3203,7 @@
                         <th>2018 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Tularemia-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3212,14 +3211,14 @@
 
           <div style="display: none;" data-disease-dashboard="Vibrosis">
             <div class="section-header section" id="NND">
-              <h4>Vibrosis Dashboard - Species</h4>
+              <h4>Vibrosis Dashboard - Genus and Species</h4>
             </div>
-            Vibrosis Dashboard - Species Placeholder
+            Vibrosis Dashboard - Genus and Species Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Vibrosis" class="cell-border" style="width:100%">
-                    <caption>Species Cases in the United States in 2010-2014</caption>
+                    <caption>Genus and Species Cases related to Vibrosis in the United States in 2010-2014</caption>
                     <thead>
                       <tr>
                         <th>Genus and Species of Vibrionaceae</th>
@@ -3230,7 +3229,7 @@
                         <th>2014 (Cases)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('Vibrosis-GenusSpecies.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -3238,17 +3237,17 @@
 
           <div style="display: none;" data-disease-dashboard="Zika Virus">
             <div class="section-header section" id="NND">
-              <h4>Zika Virus - State Dashboard</h4>
+              <h4>Zika Virus - State/Case Type Dashboard</h4>
             </div>
-            Zika Virus - State Dashboard Placeholder
+            Zika Virus - State/Case Type Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
                   <table id="Zika-Virus" class="cell-border" style="width:100%">
-                    <caption>State, Symptomatic/Presumptive Cases in the United States in 2016-2020. Presumptive
+                    <caption>State Symptomatic/Presumptive Cases related to Zika Virus in the United States in 2016-2020. Presumptive
                       viremic blood donors are people who reported no symptoms at the time of donating blood, but
                       whose blood tested positive when screened for the presence of Zika virus RNA by the blood
-                      collection agency.
+                      collection agency
                       <a href="https://www.cdc.gov/zika/reporting/2020-case-counts.html"> (Source)</a>
                     </caption>
                     <thead>
@@ -3266,7 +3265,7 @@
                         <th>2020 (Presumptive Viremic Blood Donors)</th>
                       </tr>
                     </thead>
-                  </table>
+                  </table><button type="submit" onclick="window.open('ZikaVirus-StateCaseType.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
