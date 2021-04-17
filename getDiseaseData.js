@@ -91,22 +91,6 @@ $(document).ready(function() {
                         ]
                     });
                     break;
-                case "Anaplasmosis-MonthOfOnset":
-                    table = $('#Anaplasmosis-MonthOfOnset').DataTable( {
-                        destroy: true,
-                        ajax: {
-                        url: "getSQLQuery.php",
-                        data:{
-                            dataset: "Anaplasmosis-MonthOfOnset",
-                        },
-                        dataSrc: ''
-                        },
-                        columns:[
-                        {data: 'Month of Onset'},
-                        {data: 'Cases (2000-2018)'}      
-                        ]
-                    });  
-                    break; 
                 case "Anaplasmosis-State":
                    table = $('#Anaplasmosis-State').DataTable( {
                         destroy: true,
