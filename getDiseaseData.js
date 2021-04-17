@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     // initial table for covid-19/homepage
     var table = $('#COVID-StateDeaths').DataTable( {
-      destroy: true,
+      destroy: true, "order": [], 
       ajax: {
         url: "getSQLQuery.php",
         data:{
@@ -24,7 +24,7 @@ $(document).ready(function() {
     });
 
     var table = $('#COVID-AgeGenderDeaths').DataTable( {
-        destroy: true,
+        destroy: true, "order": [], 
         ajax: {
         url: "getSQLQuery.php",
         data:{
@@ -50,7 +50,7 @@ $(document).ready(function() {
             switch(link.dataset.diseaseLink){
                 case "COVID-AgeGenderDeaths":
                     table = $('#COVID-AgeGenderDeaths').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -72,7 +72,7 @@ $(document).ready(function() {
                     break;
                 case "COVID-StateDeaths":
                     table = $('#COVID-StateDeaths').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -93,7 +93,7 @@ $(document).ready(function() {
                     break;
                 case "Anaplasmosis-State":
                    table = $('#Anaplasmosis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -109,7 +109,7 @@ $(document).ready(function() {
                     break;     
                 case "Anaplasmosis-Year":    
                     table = $('#Anaplasmosis-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -125,7 +125,7 @@ $(document).ready(function() {
                     break;
                 case "Babesiosis":
                     table = $('#Babesiosis').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -148,7 +148,7 @@ $(document).ready(function() {
                     break;
                 case "Botulism-StateCause":
                     table = $('#Botulism-StateCause').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -167,7 +167,7 @@ $(document).ready(function() {
                     break;
                 case "Botulism-Transmission":
                     table = $('#Botulism-Transmission').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -188,7 +188,7 @@ $(document).ready(function() {
                     break;
                 case "Brucellosis-State":
                     table = $('#Brucellosis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -204,7 +204,7 @@ $(document).ready(function() {
                     break;
                 case "Brucellosis-Year": 
                     table = $('#Brucellosis-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -220,7 +220,7 @@ $(document).ready(function() {
                     break;
                 case "Campylobacteriosis":
                     table = $('#Campylobacteriosis').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -236,7 +236,7 @@ $(document).ready(function() {
                     break;    
                 case "Candida-Auris":
                     table = $('#Candida-Auris').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -252,7 +252,7 @@ $(document).ready(function() {
                     break;  
                 case "Chancroid":
                     table = $('#Chancroid').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -272,7 +272,7 @@ $(document).ready(function() {
                     break;  
                 case "Chlamydia-Age":
                     table = $('#Chlamydia-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -297,7 +297,7 @@ $(document).ready(function() {
                     break;  
                 case "Chlamydia-AgeGenderRace":
                         table = $('#Chlamydia-AgeGenderRace').DataTable( {
-                            destroy: true,
+                            destroy: true, "order": [], 
                             ajax: {
                             url: "getSQLQuery.php",
                             data:{
@@ -333,7 +333,7 @@ $(document).ready(function() {
                         break;
                 case "Chlamydia-State":
                     table = $('#Chlamydia-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -358,7 +358,7 @@ $(document).ready(function() {
                     break;
                 case "Chlamydia-StateFemale":
                     table = $('#Chlamydia-StateFemale').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -383,7 +383,7 @@ $(document).ready(function() {
                     break;
                 case "Chlamydia-StateMale":
                     table = $('#Chlamydia-StateMale').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -408,7 +408,7 @@ $(document).ready(function() {
                     break;
                 case "Coccidioidomycosis":
                     table = $('#Coccidioidomycosis').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -428,7 +428,7 @@ $(document).ready(function() {
                     break;  
                 case "Congenital Syphilis-BirthRegion":
                     table = $('#Congenital-Syphilis-BirthRegion').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -450,7 +450,7 @@ $(document).ready(function() {
                     break;
                 case "Congenital Syphilis-InfantVitals":
                     table = $('#Congenital-Syphilis-InfantVitals').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -472,7 +472,7 @@ $(document).ready(function() {
                     break;  
                 case "Congenital Syphilis-Race":
                     table = $('#Congenital-Syphilis-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -494,7 +494,7 @@ $(document).ready(function() {
                     break;
                 case "Cryptosporidiosis-Age":    
                     table = $('#Cryptosporidiosis-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -511,7 +511,7 @@ $(document).ready(function() {
                     break;
                 case "Cryptosporidiosis-Gender":    
                     table = $('#Cryptosporidiosis-Gender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -527,7 +527,7 @@ $(document).ready(function() {
                     break;
                 case "Cryptosporidiosis-Race":
                     table = $('#Cryptosporidiosis-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -543,7 +543,7 @@ $(document).ready(function() {
                     break; 
                 case "Cryptosporidiosis-State":
                     table = $('#Cryptosporidiosis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -560,7 +560,7 @@ $(document).ready(function() {
                     break;
                 case "Dengue-StateLocalTrans":
                     table = $('#Dengue-StateLocalTrans').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -583,7 +583,7 @@ $(document).ready(function() {
                     break; 
                 case "Dengue-StateTravelTrans":
                     table = $('#Dengue-StateTravelTrans').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -606,7 +606,7 @@ $(document).ready(function() {
                     break; 
                 case "Ehrlichiosis-MonthOfOnset":
                     table = $('#Ehrlichiosis-MonthOfOnset').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -622,7 +622,7 @@ $(document).ready(function() {
                     break;
                 case "Ehrlichiosis-State":
                     table = $('#Ehrlichiosis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -638,7 +638,7 @@ $(document).ready(function() {
                     break;
                 case "Ehrlichiosis-Year":
                     table = $('#Ehrlichiosis-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -654,7 +654,7 @@ $(document).ready(function() {
                     break; 
                 case "Giardiasis-State":
                     table = $('#Giardiasis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -672,7 +672,7 @@ $(document).ready(function() {
                     break;
                 case "Giardiasis-Year":
                     table = $('#Giardiasis-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -688,7 +688,7 @@ $(document).ready(function() {
                     break; 
                 case "Gonorrhea-Age":          
                     table = $('#Gonorrhea-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -708,7 +708,7 @@ $(document).ready(function() {
                     break; 
                 case "Gonorrhea-AgeGenderRace":    
                     table = $('#Gonorrhea-AgeGenderRace').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -744,7 +744,7 @@ $(document).ready(function() {
                     break;
                 case "Gonorrhea-State":
                     table = $('#Gonorrhea-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -764,7 +764,7 @@ $(document).ready(function() {
                     break;
                 case "Gonorrhea-StateFemale":
                     table = $('#Gonorrhea-StateFemale').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -789,7 +789,7 @@ $(document).ready(function() {
                     break;
                 case "Gonorrhea-StateMale":
                     table = $('#Gonorrhea-StateMale').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -814,7 +814,7 @@ $(document).ready(function() {
                     break;
                 case "Haemophilus Influenzae-Age":
                     table = $('#Haemophilus-Influenzae-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -837,7 +837,7 @@ $(document).ready(function() {
                     break; 
                 case "Haemophilus Influenzae-Race":
                     table = $('#Haemophilus-Influenzae-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -854,7 +854,7 @@ $(document).ready(function() {
                     break; 
                 case "Hantavirus Infection":
                     table = $('#Hantavirus-Infection').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -870,7 +870,7 @@ $(document).ready(function() {
                     break; 
                 case "Hepatitis A-Age":       
                     table = $('#Hepatitis-A-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -895,7 +895,7 @@ $(document).ready(function() {
                     break; 
                 case "Hepatitis A-Gender":       
                     table = $('#Hepatitis-A-Gender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -920,7 +920,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis A-Race":       
                     table = $('#Hepatitis-A-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -945,7 +945,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis A-State":
                     table = $('#Hepatitis-A-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -970,7 +970,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis A-Year":  
                     table = $('#Hepatitis-A-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -987,7 +987,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis B-Age":     
                     table = $('#Hepatitis-B-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1012,7 +1012,7 @@ $(document).ready(function() {
                     break; 
                 case "Hepatitis B-Gender":
                     table = $('#Hepatitis-B-Gender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1037,7 +1037,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis B-Race":
                     table = $('#Hepatitis-B-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1062,7 +1062,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis B-State":
                     table = $('#Hepatitis-B-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1087,7 +1087,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis B-Year":
                     table = $('#Hepatitis-B-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1104,7 +1104,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis C-Age":    
                     table = $('#Hepatitis-C-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1129,7 +1129,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis C-Gender":
                     table = $('#Hepatitis-C-Gender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1154,7 +1154,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis C-Race":
                     table = $('#Hepatitis-C-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1179,7 +1179,7 @@ $(document).ready(function() {
                     break;
                 case "Hepatitis C-Year":   
                     table = $('#Hepatitis-C-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1196,7 +1196,7 @@ $(document).ready(function() {
                     break; 
                 case "HIV-Age":    
                     table = $('#HIV-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1216,7 +1216,7 @@ $(document).ready(function() {
                     break; 
                 case "HIV-Gender":    
                     table = $('#HIV-Gender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1236,7 +1236,7 @@ $(document).ready(function() {
                     break; 
                 case "HIV-Race":
                     table = $('#HIV-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1256,7 +1256,7 @@ $(document).ready(function() {
                     break;
                 case "Novel Influenza A Virus-State":
                     table = $('#Novel-Influenza-A-Virus-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1281,7 +1281,7 @@ $(document).ready(function() {
                     break; 
                 case "Novel Influenza A Virus-Type":
                     table = $('#Novel-Influenza-A-Virus-Type').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1306,7 +1306,7 @@ $(document).ready(function() {
                     break; 
                 case "Legionellosis-Age":     
                     table = $('#Legionellosis-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1325,7 +1325,7 @@ $(document).ready(function() {
                     break; 
                 case "Legionellosis-Gender":
                     table = $('#Legionellosis-Gender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1344,7 +1344,7 @@ $(document).ready(function() {
                     break;
                 case "Legionellosis-Race":    
                     table = $('#Legionellosis-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1363,7 +1363,7 @@ $(document).ready(function() {
                     break;
                 case "Legionellosis-State":
                     table = $('#Legionellosis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1382,7 +1382,7 @@ $(document).ready(function() {
                     break;
                 case "Lyme Disease-AgeGender":     
                     table = $('#Lyme-Disease-AgeGender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1400,7 +1400,7 @@ $(document).ready(function() {
                     break; 
                 case "Lyme Disease-MonthOfOnset":
                     table = $('#Lyme-Disease-MonthOfOnset').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1416,7 +1416,7 @@ $(document).ready(function() {
                     break;
                 case "Lyme Disease-State":
                     table = $('#Lyme-Disease-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1441,7 +1441,7 @@ $(document).ready(function() {
                     break;
                 case "Lyme Disease-Year":    
                     table = $('#Lyme-Disease-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1458,7 +1458,7 @@ $(document).ready(function() {
                     break;
                 case "Measles":
                     table = $('#Measles').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1474,7 +1474,7 @@ $(document).ready(function() {
                     break; 
                 case "Meningococcal Disease":
                     table = $('#Meningococcal-Disease').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1493,7 +1493,7 @@ $(document).ready(function() {
                     break; 
                 case "Mumps":
                     table = $('#Mumps').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1509,7 +1509,7 @@ $(document).ready(function() {
                     break;  
                 case "Pertussis-Age":
                     table = $('#Pertussis-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1527,7 +1527,7 @@ $(document).ready(function() {
                     break; 
                 case "Pertussis-State":
                     table = $('#Pertussis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1544,7 +1544,7 @@ $(document).ready(function() {
                     break; 
                 case "Plague":
                     table = $('#Plague').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1561,7 +1561,7 @@ $(document).ready(function() {
                     break;
                 case "Pneumococcal Disease":
                     table = $('#Pneumococcal-Disease').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1578,7 +1578,7 @@ $(document).ready(function() {
                     break;  
                 case "Q Fever-Age":
                     table = $('#Q-Fever-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1594,7 +1594,7 @@ $(document).ready(function() {
                     break; 
                 case "Q Fever-MonthOfOnset":
                     table = $('#Q-Fever-MonthOfOnset').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1610,7 +1610,7 @@ $(document).ready(function() {
                     break; 
                 case "Rabies-StateAgeGenderVariant":
                     table = $('#Rabies-StateAgeGenderVariant').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1631,7 +1631,7 @@ $(document).ready(function() {
                     break;
                 case "Spotted Fever-Age":
                     table = $('#Spotted-Fever-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1647,7 +1647,7 @@ $(document).ready(function() {
                     break; 
                 case "Spotted Fever-MonthOfOnset":
                     table = $('#Spotted-Fever-MonthOfOnset').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1663,7 +1663,7 @@ $(document).ready(function() {
                     break; 
                 case "Spotted Fever-State":
                     table = $('#Spotted-Fever-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1679,7 +1679,7 @@ $(document).ready(function() {
                     break;
                 case "Spotted Fever-Year":    
                     table = $('#Spotted-Fever-Year').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1695,7 +1695,7 @@ $(document).ready(function() {
                     break; 
                 case "Syphilis-Age":
                     table = $('#Syphilis-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1720,7 +1720,7 @@ $(document).ready(function() {
                     break; 
                 case "Syphilis-AgeGenderRace":
                     table = $('#Syphilis-AgeGenderRace').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1756,7 +1756,7 @@ $(document).ready(function() {
                     break;
                 case "Syphilis-State":
                     table = $('#Syphilis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1781,7 +1781,7 @@ $(document).ready(function() {
                     break;
                 case "Syphilis-StateFemale":
                     table = $('#Syphilis-StateFemale').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1806,7 +1806,7 @@ $(document).ready(function() {
                     break;
                 case "Syphilis-StateMale":
                     table = $('#Syphilis-StateMale').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1831,7 +1831,7 @@ $(document).ready(function() {
                     break;
                 case "Trichinellosis-State":
                     table = $('#Trichinellosis-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1856,7 +1856,7 @@ $(document).ready(function() {
                     break;
                 case "Trichinellosis-SuspectMeat":
                     table = $('#Trichinellosis-SuspectMeat').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1878,7 +1878,7 @@ $(document).ready(function() {
                     break;
                 case "Trichinellosis-Age": 
                     table = $('#Trichinellosis-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1894,7 +1894,7 @@ $(document).ready(function() {
                     break; 
                 case "Tuberculosis-Age":   
                     table = $('#Tuberculosis-Age').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1917,7 +1917,7 @@ $(document).ready(function() {
                     break;
                 case "Tuberculosis-AgeGender":
                     table = $('#Tuberculosis-AgeGender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1935,7 +1935,7 @@ $(document).ready(function() {
                     break; 
                 case "Tuberculosis-Race":
                     table = $('#Tuberculosis-Race').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1959,7 +1959,7 @@ $(document).ready(function() {
                     break;
                 case "Tularemia-AgeGender":   
                     table = $('#Tularemia-AgeGender').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -1977,7 +1977,7 @@ $(document).ready(function() {
                     break; 
                 case "Tularemia-State":
                     table = $('#Tularemia-State').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -2003,7 +2003,7 @@ $(document).ready(function() {
                     break;
                 case "Vibrosis":
                     table = $('#Vibrosis').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
@@ -2023,7 +2023,7 @@ $(document).ready(function() {
                     break; 
                 case "Zika Virus":
                     table = $('#Zika-Virus').DataTable( {
-                        destroy: true,
+                        destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
