@@ -2,37 +2,17 @@ $(document).ready(function() {
     var links = document.querySelectorAll('[data-disease-link]');
     var dashboards = document.querySelectorAll('[data-disease-dashboard]');
 
-    // initial table for covid-19/homepage
-    var table = $('#COVID-StateDeaths').DataTable( {
-      destroy: true, "order": [], 
-      ajax: {
-        url: "getSQLQuery.php",
-        data:{
-          dataset: "COVID-StateDeaths",
-        },
-        dataSrc: ''
-      },
-      columns:[
-        {data: 'state'},
-        {data: 'covid_19_deaths'},
-        {data: 'total_deaths'},
-        {data: 'pneumonia_deaths'},
-        {data: 'pneumonia_and_covid_19_deaths'},
-        {data: 'influenza_deaths'},
-        {data: 'pneumonia_influenza_or_covid'} 
-      ]
-    });
-
-    var table = $('#COVID-AgeGenderDeaths').DataTable( {
+    var table = $('#COVID-GenderAge').DataTable( {
         destroy: true, "order": [], 
         ajax: {
         url: "getSQLQuery.php",
         data:{
-            dataset: "COVID-AgeGenderDeaths",
+            dataset: "COVID-GenderAge",
         },
         dataSrc: ''
         },
         columns:[
+            {data: 'data_as_of'},
             {data: 'sex'},
             {data: 'age_group'},
             {data: 'covid_19_deaths'},
@@ -44,21 +24,44 @@ $(document).ready(function() {
         ]
     });
 
+    // initial table for covid-19/homepage
+    var table = $('#COVID-State').DataTable( {
+      destroy: true, "order": [], 
+      ajax: {
+        url: "getSQLQuery.php",
+        data:{
+          dataset: "COVID-State",
+        },
+        dataSrc: ''
+      },
+      columns:[
+        {data: 'data_as_of'},
+        {data: 'state'},
+        {data: 'covid_19_deaths'},
+        {data: 'total_deaths'},
+        {data: 'pneumonia_deaths'},
+        {data: 'pneumonia_and_covid_19_deaths'},
+        {data: 'influenza_deaths'},
+        {data: 'pneumonia_influenza_or_covid'} 
+      ]
+    });
+
     // creating each table with its corresponding column names and dataset value
     links.forEach(function (link) {
         link.addEventListener('click', function () {
             switch(link.dataset.diseaseLink){
-                case "COVID-AgeGenderDeaths":
-                    table = $('#COVID-AgeGenderDeaths').DataTable( {
+                case "COVID-GenderAge":
+                    table = $('#COVID-GenderAge').DataTable( {
                         destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
-                            dataset: "COVID-AgeGenderDeaths",
+                            dataset: "COVID-GenderAge",
                         },
                         dataSrc: ''
                         },
                         columns:[
+                            {data: 'data_as_of'},
                             {data: 'sex'},
                             {data: 'age_group'},
                             {data: 'covid_19_deaths'},
@@ -70,17 +73,18 @@ $(document).ready(function() {
                         ]
                     });
                     break;
-                case "COVID-StateDeaths":
-                    table = $('#COVID-StateDeaths').DataTable( {
+                case "COVID-State":
+                    table = $('#COVID-State').DataTable( {
                         destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
-                            dataset: "COVID-StateDeaths",
+                            dataset: "COVID-State",
                         },
                         dataSrc: ''
                         },
                         columns:[
+                            {data: 'data_as_of'},
                             {data: 'state'},
                             {data: 'covid_19_deaths'},
                             {data: 'total_deaths'},
