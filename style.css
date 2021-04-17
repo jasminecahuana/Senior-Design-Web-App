@@ -10,13 +10,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%;
   margin: 0;
+  background-color: lightsteelblue;
 }
 
 /* default DataTable table has black font color so changing the dashboard card to be a lighter color for visibility  */
 .dashboard{
   background-color: #787d82 !important;
   overflow: auto;
-
 }
 
 caption{
@@ -30,7 +30,7 @@ caption{
 /* A fixed sidenav, full height */
 .sidenav {
   height: 100%;
-  width: 300px;
+  width: 255px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -62,9 +62,15 @@ caption{
   color: #f1f1f1;
 }
 
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 /* Main content */
 .main {
-  margin-left: 300px; /* Same as the width of the sidenav */
+  margin-left: 255px; /* Same as the width of the sidenav */
   font-size: 20px; /* Increased text to enable scrolling */
   padding: 0px 10px;
 }
@@ -72,7 +78,7 @@ caption{
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
-  background-color: #262626;
+  background-color: #505050;
   padding-left: 2px;
 }
 
@@ -88,17 +94,35 @@ caption{
   .sidenav a {font-size: 25px;}
 }
 
+.card button {
+  background-color: #6F8FAF;
+  color: white;
+  border-style: outset;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: emoji;
+}
+
 .btn-link {
-  font-weight: 400;
-  color: #ffffff;
+  color: white;
+  background-color: transparent;
   text-decoration: underline;
-  font-size: smaller;
+  font-size: 14px;
+}
+
+.btn-link:hover {
+  color: rgb(76, 161, 230);
 }
 
 a {
   font-weight: 400;
   color: #ffffff;
   text-decoration: underline;
+  font-size: smaller;
+  /* In case we want borders around subpages in nav menu later */
+  /* border-style: outset;
+  border-top: 1mm;
+  border-color: white; */
 }
 
 h2 {
@@ -210,6 +234,6 @@ label{
   font-size: 16px;
 }
 
-.dataTables_wrapper { 
-  font-size: 14px 
+.dataTables_wrapper {
+  font-size: 14px;
 }

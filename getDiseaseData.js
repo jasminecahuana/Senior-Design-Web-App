@@ -162,13 +162,13 @@ $(document).ready(function() {
                         ]
                     }); 
                     break;
-                case "Botulism-Cause":
-                    table = $('#Botulism-Cause').DataTable( {
+                case "Botulism-StateCause":
+                    table = $('#Botulism-StateCause').DataTable( {
                         destroy: true,
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
-                            dataset: "Botulism-Cause",
+                            dataset: "Botulism-StateCause",
                         },
                         dataSrc: ''
                         },
@@ -1624,24 +1624,26 @@ $(document).ready(function() {
                         ]
                     }); 
                     break; 
-                case "Rabies-(Human)":
-                    console.log("Rabies (Human): Unsure of what should be displayed. Data appears to be cases of rabies. Possibly best to showcase with tableau.");
-                    // table = $('#Rabies-(Human)').DataTable( {
-                    //     destroy: true,
-                    //     ajax: {
-                    //     url: "getSQLQuery.php",
-                    //     data:{
-                    //         dataset: "Rabies (Human)",
-                    //     },
-                    //     dataSrc: ''
-                    //     },
-                    //     columns:[
-                    //         {data: 'Age (Years)'},
-                    //         {data: 'Total Cases (2001-2018)'},
-                    //         {data: 'Male Cases (2001-2018)'},
-                    //         {data: 'Female Cases (2001-2018)'}
-                    //     ]
-                    // }); 
+                case "Rabies-StateAgeGenderVariant":
+                    table = $('#Rabies-StateAgeGenderVariant').DataTable( {
+                        destroy: true,
+                        ajax: {
+                        url: "getSQLQuery.php",
+                        data:{
+                            dataset: "Rabies-StateAgeGenderVariant",
+                        },
+                        dataSrc: ''
+                        },
+                        columns:[
+                            {data: 'Date of Onset'},
+                            {data: 'Reporting State'},
+                            {data: 'Age'},
+                            {data: 'Gender'},
+                            {data: 'Exposure_1'},
+                            {data: 'Exposure_2'},
+                            {data: 'Rabies Virus Variant_1'}
+                        ]
+                    }); 
                     break;
                 case "Spotted Fever-Age":
                     table = $('#Spotted-Fever-Age').DataTable( {
