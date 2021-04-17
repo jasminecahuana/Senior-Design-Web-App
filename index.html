@@ -35,8 +35,8 @@
   <script src="getDiseaseData.js"></script>
 
   <!--Tableau API-->
-  <script type='text/javascript'
-  src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script>
+  <!-- <script type='text/javascript'
+  src='https://prod-useast-b.online.tableau.com/javascripts/api/viz_v1.js'></script> -->
 
   <title>SDTest</title>
 </head>
@@ -561,7 +561,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col">
-          <!-- All Covid Tableau visualizations+Twitter / Homepage -->
+          <!-- All Covid Tableau visualizations+Twitter / Homepage, excluding covid subpage -->
           <div data-disease-dashboard="COVID-Homepage">
             <div class="section-header section" id="COVID">
               <h4>COVID-19 - Dashboard</h4>
@@ -622,6 +622,7 @@
         </div>
       </div>
 
+      <!-- All Other Tableau visualizations/charts, including covid subpage -->
       <div class="row justify-content-center">
         <div class="col-12">
           <!-- Covid Subpages -->
@@ -733,7 +734,13 @@
             
             <div class="row">
               <div class="col-12">
-                <div class='tableauPlaceholder' style='width: 100%; height: 1242px;'><object class='tableauViz' width='100%' height='1242' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;iidtsanalytics' /><param name='name' value='AnaplasmosisCases2000-2018&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
+                <!--Another way to embed the tableau visuals, except its embedding an image so its not interactable-->
+                <!-- <iframe width="800px" height="600px" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnaplasmosisData&#47;AnaplasmosisCases2000-2018&#47;1_rss.png">
+                </iframe> -->
+
+                <iframe width="100%" height="600px" src="https://public.tableau.com/views/AnaplasmosisData/AnaplasmosisCases2000-2018?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
+                </iframe>
+
               </div>
             </div>
 
@@ -910,7 +917,7 @@
 
             <div class="row">
               <div class="col-12">
-                <div class='tableauPlaceholder' style='width: 100%; height: 1242px;'><object class='tableauViz' width='100%' height='1242' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;iidtsanalytics' /><param name='name' value='2020CandidaAurisbyStateData&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
+
               </div>
             </div>
             <div class="row">
@@ -938,7 +945,7 @@
 
             <div class="row">
               <div class="col-12">
-                <div class='tableauPlaceholder' style='width: 100%; height: 1242px;'><object class='tableauViz' width='100%' height='1242' style='display:none;'><param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;iidtsanalytics' /><param name='name' value='2018DataofChancroidbyState&#47;Sheet4' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
+
               </div>
             </div>
 
@@ -3315,12 +3322,6 @@
         </div>
       </div>
     </div>
-  </div>
-
-
-
-  <!--Don't delete yet, its being used as a test space to see if php is returning its echo statement. You can uncomment to see what its returning.-->
-  <div class="connection"></div>
   </div>
 
   <!-- Scripts for background -->
