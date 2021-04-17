@@ -48,10 +48,10 @@
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-container">
-      <a data-disease-link="COVID-AgeGenderDeaths"><button class="btn btn-link" type="button"
-          data-disease-link="COVID-AgeGenderDeaths">Gender/Age</button></a>
-      <a data-disease-link="COVID-StateDeaths"><button class="btn btn-link" type="button"
-          data-disease-link="COVID-StateDeaths">State</button></a>
+      <a data-disease-link="COVID-GenderAge"><button class="btn btn-link" type="button"
+          data-disease-link="COVID-GenderAge">Gender/Age</button></a>
+      <a data-disease-link="COVID-State"><button class="btn btn-link" type="button"
+          data-disease-link="COVID-State">State</button></a>
     </div>
 
     <button class="dropdown-btn">Anaplasmosis
@@ -566,13 +566,11 @@
             <div class="section-header section" id="COVID">
               <h4>COVID-19 - Dashboard</h4>
             </div>
-            
             <div class="row">
               <div class="col-8">
                 <div class="row">
                   <iframe width="100%" height="900px" src="https://public.tableau.com/views/COVID-19DeathsComparedtoPneumoniaInfluenza/COVID-19DeathsbyStatewithPopulationDataOverlay?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
                   </iframe>
-                  
                 </div>
               </div>
               <div class="col-4">
@@ -590,11 +588,11 @@
                     <div class="card">
                       <div class="card-body">
                         <h5 class="card-title" style="font-size:larger">Intelligent Twitter Data</h5>
-                        <h5 class="card-subtitle mb-2" style="color: rgb(192, 45, 45); font-weight: bold;">Tweets by CDC</h5>
+                        <h5 class="card-subtitle mb-2" style="color: red; font-weight: bold; font-size: large;">Tweets by CDC</h5>
                         <p class="card-text mb-2">The Twitter stream above provides a real-time stream of tweets
                           from the CDC. All of the data collected and presented in this project have originated from
                           available COVID-19 and Nationally Notifiable Diseases data the CDC provides.</p>
-                        <h5 class="card-subtitle mb-2" style="color: rgb(192, 45, 45); font-weight: bold">Word Cloud</h5>
+                        <h5 class="card-subtitle mb-2" style="color: red; font-weight: bold; font-size: large">Word Cloud</h5>
                         <p class="card-text mb-2">The image provided below represents the Twitter Natural
                           Language Processing portion of this project. The word cloud is created by collecting tweets
                           using Twitter libraries, tokenization, removing stop words, lemmatization, and word frequency.
@@ -627,56 +625,56 @@
       <div class="row justify-content-center">
         <div class="col-12">
           <!-- Covid Subpages -->
-          <div style="display: none;" data-disease-dashboard="COVID-StateDeaths">
+          <div style="display: none;" data-disease-dashboard="COVID-GenderAge">
             <div class="section-header section" id="NND">
-              <h4>COVID-19 - State Dashboard</h4>
+              <h4>COVID-19 - Gender/Age Dashboard</h4>
             </div>
-            COVID-19 - State Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
-                  <table id="COVID-StateDeaths" class="cell-border" style="width:100%">
-                    <caption>State Deaths related to COVID-19/Pneumonia/Influenza in the United States since the beginning of the pandemic</caption>
+                  <table id="COVID-GenderAge" class="cell-border" style="width:100%">
+                    <caption>Gender, Age, and Deaths related to COVID-19/Pneumonia/Influenza in the United States since the beginning of the pandemic</caption>
                     <thead>
                       <tr>
-                        <th>State</th>
+                        <th>Data As Of</th>
+                        <th>Gender</th>
+                        <th>Age Group</th>
                         <th>COVID-19 Deaths</th>
-                        <th>Total Deaths</th>
+                        <th>Total Deaths (Any Cause)</th>
                         <th>Pneumonia Deaths</th>
                         <th>Pneumonia & COVID-19 Deaths</th>
                         <th>Influenza Deaths</th>
-                        <th>Pneumonia,Influenza, Or COVID-19 Deaths</th>
+                        <th>Pneumonia, Influenza, or COVID-19 Deaths</th>
                       </tr>
                     </thead>
-                  </table><button type="submit" onclick="window.open('CSVFiles/COVID-State.csv')">Download as CSV</button>
+                  </table><button type="submit" onclick="window.open('CSVFiles/COVID-GenderAge.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
           </div>
 
-          <div style="display: none;" data-disease-dashboard="COVID-AgeGenderDeaths">
+          <div style="display: none;" data-disease-dashboard="COVID-State">
             <div class="section-header section" id="NND">
-              <h4>COVID-19 - Gender/Age Dashboard</h4>
+              <h4>COVID-19 - State Dashboard</h4>
             </div>
-            COVID-19 - Gender/Age Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
-                  <table id="COVID-AgeGenderDeaths" class="cell-border" style="width:100%">
-                    <caption>Gender, Age, and Deaths related to COVID-19/Pneumonia/Influenza in the United States since the beginning of the pandemic</caption>
+                  <table id="COVID-State" class="cell-border" style="width:100%">
+                    <caption>State Deaths related to COVID-19/Pneumonia/Influenza in the United States since the beginning of the pandemic</caption>
                     <thead>
                       <tr>
-                        <th>Gender</th>
-                        <th>Age Group</th>
+                        <th>Data As Of</th>
+                        <th>State</th>
                         <th>COVID-19 Deaths</th>
-                        <th>Total Deaths</th>
+                        <th>Total Deaths (Any Cause)</th>
                         <th>Pneumonia Deaths</th>
                         <th>Pneumonia & COVID-19 Deaths</th>
                         <th>Influenza Deaths</th>
-                        <th>Pneumonia,Influenza, Or COVID-19 Deaths</th>
+                        <th>Pneumonia, Influenza, or COVID-19 Deaths</th>
                       </tr>
                     </thead>
-                  </table><button type="submit" onclick="window.open('CSVFiles/COVID-GenderAge.csv')">Download as CSV</button>
+                  </table><button type="submit" onclick="window.open('CSVFiles/COVID-State.csv')">Download as CSV</button>
                 </div>
               </div>
             </div>
@@ -714,14 +712,8 @@
                 <!--Another way to embed the tableau visuals, except its embedding an image so its not interactable-->
                 <!-- <iframe width="800px" height="600px" src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;An&#47;AnaplasmosisData&#47;AnaplasmosisCases2000-2018&#47;1_rss.png">
                 </iframe> -->
-
                 <iframe width="100%" height="600px" src="https://public.tableau.com/views/AnaplasmosisData/AnaplasmosisCases2000-2018?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
                 </iframe>
-
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
                 <div class="card dashboard">
                   <table id="Anaplasmosis-Year" class="cell-border" style="width:100%">
                     <caption>Yearly Cases related to Anaplasmosis in the United States in 2000-2018</caption>
@@ -741,17 +733,10 @@
             <div class="section-header section" id="NND">
               <h4>Babesiosis - State Dashboard</h4>
             </div>
-
             <div class="row">
               <div class="col-12">
-
                 <iframe width="100%" height="600px" src="https://public.tableau.com/views/Babesiosis/2011-2018BabesiosisCasesbyStatewithPopulationDataOverlay?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
                 </iframe>
-
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
                 <div class="card dashboard">
                   <table id="Babesiosis" class="cell-border" style="width:100%">
                     <caption>State Cases related to Babesiosis in the United States in 2011-2018</caption>
@@ -897,21 +882,10 @@
             <div class="section-header section" id="NND">
               <h4>Candida Auris - State Dashboard</h4>
             </div>
-
             <div class="row">
               <div class="col-12">
-                <div class="row">
-                  <div class="col-12">
-    
-                    <iframe width="100%" height="600px" src="https://public.tableau.com/views/CandidaAurisDiseaseData/CandidaAurisbyStatewithPopulationDataOverlay?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
-                    </iframe>
-    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
+                <iframe width="100%" height="600px" src="https://public.tableau.com/views/CandidaAurisDiseaseData/CandidaAurisbyStatewithPopulationDataOverlay?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
+                </iframe>
                 <div class="card dashboard">
                   <table id="Candida-Auris" class="cell-border" style="width:100%">
                     <caption>State Cases related to Candida Auris in the United States as of 2020</caption>
@@ -932,18 +906,10 @@
             <div class="section-header section" id="NND">
               <h4>Chancroid - State Dashboard</h4>
             </div>
-
             <div class="row">
               <div class="col-12">
-
                 <iframe width="100%" height="600px" src="https://public.tableau.com/views/ChancroidDiseaseData/ChancroidCasesbyStatewithPopulationDataOverlay?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
                 </iframe>
-
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-12">
                 <div class="card dashboard">
                   <table id="Chancroid" class="cell-border" style="width:100%">
                     <caption>State Cases related to Chancroid in the United States in 2014-2018</caption>
@@ -2881,22 +2847,7 @@
             <div class="section-header section" id="NND">
               <h4>Syphilis - State Dashboard</h4>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <div class='tableauPlaceholder' style='width: 100%; height: 652px;'>
-                  <object class='tableauViz' width='100%' height='652' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='site_root' value='&#47;t&#47;iidtsanalytics' />
-                    <param name='name'
-                      value='2018SyphilisDatawith2018PopulationDataLayer&#47;SyphillisbyStatewith2018PopulationDataOverlay' />
-                    <param name='tabs' value='no' />
-                    <param name='toolbar' value='yes' />
-                    <param name='showAppBanner' value='false' />
-                  </object>
-                </div>
-              </div>
-            </div>
+            Syphilis - State Dashboard Placeholder
             <div class="row">
               <div class="col-12">
                 <div class="card dashboard">
@@ -3179,9 +3130,10 @@
             <div class="section-header section" id="NND">
               <h4>Tularemia - State Dashboard</h4>
             </div>
-            Tularemia - State Dashboard Placeholder
             <div class="row">
               <div class="col-12">
+                <iframe width="100%" height="600px" src="https://public.tableau.com/views/2018TularemiabyStateData/Sheet1?:language=en&:display_count=y&:origin=viz_share_link&:showVizHome=no&:embed=true">
+                </iframe>
                 <div class="card dashboard">
                   <table id="Tularemia-State" class="cell-border" style="width:100%">
                     <caption>State Cases related to Tularemia in the United States in 2008-2018</caption>
@@ -3280,35 +3232,13 @@
             <div class="section-header section" id="NND">
               <h4>Disease by Age Dashboard</h4>
             </div>
-
-            <div class='tableauPlaceholder' style='width: 100%; height: 669px;'>
-              <object class='tableauViz' width='100%' height='669' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='site_root' value='&#47;t&#47;iidtsanalytics' />
-                <param name='name' value='Age_tableau&#47;Age' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='showAppBanner' value='false' />
-              </object>
-            </div>
+            Disease by Age Dashboard Placeholder
           </div>
           <div style="display: none;" data-disease-dashboard="Disease by Gender">
             <div class="section-header section" id="NND">
               <h4>Disease by Gender Dashboard</h4>
             </div>
-
-            <div class='tableauPlaceholder' style='width: 100%; height: 669px;'>
-              <object class='tableauViz' width='100%' height='669' style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fprod-useast-b.online.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='site_root' value='&#47;t&#47;iidtsanalytics' />
-                <param name='name' value='Gender_Tableau&#47;Gender' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='showAppBanner' value='false' />
-              </object>
-            </div>
+            Disease by Gender Dashboard Placeholder
           </div>
           <div style="display: none;" data-disease-dashboard="Disease by Race">
             <div class="section-header section" id="NND">
