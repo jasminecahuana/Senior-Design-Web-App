@@ -2005,13 +2005,13 @@ $(document).ready(function() {
                         ]
                     }); 
                     break;
-                case "Vibrosis":
-                    table = $('#Vibrosis').DataTable( {
+                case "Vibriosis":
+                    table = $('#Vibriosis').DataTable( {
                         destroy: true, "order": [], 
                         ajax: {
                         url: "getSQLQuery.php",
                         data:{
-                            dataset: "Vibrosis",
+                            dataset: "Vibriosis",
                         },
                         dataSrc: ''
                         },

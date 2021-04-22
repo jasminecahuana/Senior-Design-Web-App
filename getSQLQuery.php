@@ -286,7 +286,7 @@
         case "Tularemia-State":
             $sql = "SELECT * FROM iidts_prod.disease_tularemia_state_t limit 50;";
             break;
-        case "Vibrosis":
+        case "Vibriosis":
             $sql = "SELECT * FROM iidts_prod.disease_vibriosis_species_t limit 16;";
             break;
         case "Zika Virus":
